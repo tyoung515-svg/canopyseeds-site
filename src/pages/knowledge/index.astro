@@ -1,0 +1,72 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('knowledge', (e) => !e.data.draft)).sort(
+  (a, b) => (a.data.order ?? 100) - (b.data.order ?? 100),
+);
+const categories = ['Papers', 'Tutorials', 'Work Shapes', 'Architecture'];
+---
+
+<Base
+  title="Knowledge · BoB"
+  description="Papers, tutorials, work shapes, and architecture for BoB and the Canopy Seed philosophy."
+>
+  <div class="kn-wrap">
+    <div class="kn-head">
+      <p class="eyebrow">Knowledge</p>
+      <h1>Learn BoB, and the thinking behind it.</h1>
+      <p>
+        Papers, tutorials, work shapes, and architecture. In writing, audio,
+        video, and small apps you can poke at.
+      </p>
+    </div>
+
+    <div class="kn-filters" id="filters">
+      <button class="kn-filter" data-filter="all" aria-pressed="true">All</button>
+      {
+        categories.map((c) => (
+          <button class="kn-filter" data-filter={c} aria-pressed="false">
+            {c}
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="kn-grid" id="grid">
+      {
+        entries.map((e) => (
+          <a class="kn-card" href={`/knowledge/${e.id}/`} data-cat={e.data.category} data-fmt={e.data.format}>
+            <div class="kn-tags">
+              <span class="kn-badge cat">{e.data.category}</span>
+              <span class="kn-badge fmt">{e.data.format}</span>
+            </div>
+            <h3>{e.data.title}</h3>
+            <p>{e.data.description}</p>
+            <span class="kn-more">Read →</span>
+          </a>
+        ))
+      }
+    </div>
+    <p class="kn-empty" id="empty" style="display:none">More coming soon in this category.</p>
+  </div>
+
+  <script>
+    const btns = document.querySelectorAll<HTMLButtonElement>('.kn-filter');
+    const cards = document.querySelectorAll<HTMLElement>('.kn-card');
+    const empty = document.getElementById('empty');
+    btns.forEach((b) =>
+      b.addEventListener('click', () => {
+        const f = b.dataset.filter;
+        btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+        let shown = 0;
+        cards.forEach((c) => {
+          const match = f === 'all' || c.dataset.cat === f;
+          c.style.display = match ? '' : 'none';
+          if (match) shown++;
+        });
+        if (empty) empty.style.display = shown ? 'none' : '';
+      }),
+    );
+  </script>
+</Base>

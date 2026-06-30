@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('knowledge');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<Base title={`${d.title} · BoB`} description={d.description}>
+  <article class="entry">
+    <a class="entry-back" href="/knowledge">← Knowledge</a>
+    <header class="entry-head">
+      <div class="kn-tags">
+        <span class="kn-badge cat">{d.category}</span>
+        <span class="kn-badge fmt">{d.format}</span>
+      </div>
+      <h1>{d.title}</h1>
+      <p class="entry-desc">{d.description}</p>
+    </header>
+
+    {
+      d.videoEmbed && (
+        <div class="entry-media">
+          <div class="ratio">
+            <iframe
+              src={d.videoEmbed}
+              title={d.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        </div>
+      )
+    }
+    {d.audioSrc && (<div class="entry-media"><audio controls src={d.audioSrc} /></div>)}
+    {
+      d.appSrc && (
+        <div class="entry-media">
+          <div class="ratio">
+            <iframe src={d.appSrc} title={d.title} />
+          </div>
+        </div>
+      )
+    }
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
