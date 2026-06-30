@@ -1,0 +1,512 @@
+---
+const GITHUB = "https://github.com/tyoung515-svg/canopy-seed";
+const RELEASES = "https://github.com/tyoung515-svg/canopy-seed/releases";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/icon/bob-crest-64.png" />
+    <link rel="apple-touch-icon" href="/icon/bob-crest-256.png" />
+    <title>BoB · Own your AI. BoB does the rest.</title>
+    <meta
+      name="description"
+      content="BoB turns a plain-English idea into finished, checked work: code, research, documents, and more. Local-first, no subscription, no lock-in. A Canopy Seed project."
+    />
+    <meta property="og:title" content="BoB · Own your AI. BoB does the rest." />
+    <meta
+      property="og:description"
+      content="An AI teammate that turns ideas into finished work on models you own, for pennies, and can't be export-banned."
+    />
+    <meta property="og:image" content="/brand/bob-crest.png" />
+    <meta name="theme-color" content="#0a120e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- nav -->
+    <header class="nav">
+      <a class="brand" href="/">
+        <span class="brand-badge"><img src="/icon/bob-crest-inv-gray.png" alt="" width="42" height="42" /></span>
+        <span class="brand-name">BoB</span>
+        <span class="brand-by">by Canopy Seed</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#why">Why</a>
+        <a href="#story">The story</a>
+        <a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-sm" href={RELEASES} target="_blank" rel="noopener">Get BoB</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero -->
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A Canopy Seed project</p>
+          <h1>Own your AI.<br />BoB does the rest.</h1>
+          <p class="lede">
+            BoB turns a plain-English idea into finished, checked work: code, a
+            research report, a business tool, a first draft. Local-first, no
+            subscription, no lock-in. The intelligence is rented from whoever's
+            cheapest this week. The thing you <em>own</em> is BoB.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-lg" href={RELEASES} target="_blank" rel="noopener">Get BoB, free</a>
+            <a class="btn btn-ghost btn-lg" href="#how">How it works</a>
+          </div>
+          <p class="trust">Runs on your machine, with your keys · open source · pennies a build</p>
+        </div>
+        <div class="hero-art">
+          <img
+            src="/brand/bob-sticker.png"
+            alt="BoB, a Highlander hoisting a mechanical keyboard overhead"
+            width="520"
+            loading="eager"
+          />
+        </div>
+      </section>
+
+      <!-- the moment -->
+      <section class="band">
+        <div class="band-inner">
+          <h2>The week everyone learned you don't own what you rent.</h2>
+          <p>
+            On June 12, 2026, the world's most capable AI model was switched off
+            by a single government order. For everyone, in an afternoon, paying
+            customers included. If your work lived on that model, your work
+            stopped.
+          </p>
+          <p class="strong">BoB's didn't. Because BoB never depended on any one model in the first place.</p>
+          <p class="pull">Rent the intelligence. Own the worker.</p>
+        </div>
+      </section>
+
+      <!-- what BoB is -->
+      <section id="why" class="section">
+        <div class="section-head">
+          <h2>Not one more place to call an API.</h2>
+          <p>
+            Plenty of tools route your prompt to a dozen models. That's table
+            stakes, and it doesn't save you when the model you rely on
+            disappears, or quietly hands you a wrong answer. BoB adds the part
+            that actually matters.
+          </p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="card-ic">✓</div>
+            <h3>Checks its own work</h3>
+            <p>
+              Every meaningful step is verified by a <em>different</em> family of
+              model before it's trusted. Cheap models, kept honest, so you can
+              actually rely on what comes out.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-ic">⚒</div>
+            <h3>Finishes the job</h3>
+            <p>
+              Not a single answer. A small fleet that plans, builds, tests, fixes
+              what's broken, and hands you something that runs. BoB is a
+              teammate, not a chatbox.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-ic">⛰</div>
+            <h3>Can't be taken away</h3>
+            <p>
+              No single vendor is load-bearing. Ban one, swap it. Run it on your
+              own machine if you want. There's nothing here to deprecate,
+              reprice, or export-ban out from under you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- who it's for -->
+      <section id="who" class="section">
+        <div class="section-head">
+          <h2>Not just for coders.</h2>
+          <p>
+            BoB is a general-purpose worker. Software is what it's been proven on
+            hardest, but the same harness researches, writes, and builds whatever
+            you need.
+          </p>
+        </div>
+        <div class="use-cases">
+          <div class="card">
+            <div class="card-ic">❯_</div>
+            <h3>Developers</h3>
+            <p>Apps, scripts, fixes, tests. Plain English to running code, checked before it ships.</p>
+          </div>
+          <div class="card">
+            <div class="card-ic">✦</div>
+            <h3>Knowledge workers</h3>
+            <p>Research, summaries, analysis, reports, grounded in sources BoB actually re-reads, so the facts hold up.</p>
+          </div>
+          <div class="card">
+            <div class="card-ic">▦</div>
+            <h3>Small business</h3>
+            <p>The tools and docs you'd normally hire out: a quote calculator, an inventory tracker, a policy doc, an outreach plan. Owned, not rented per seat.</p>
+          </div>
+          <div class="card">
+            <div class="card-ic">✎</div>
+            <h3>Writers &amp; creatives</h3>
+            <p>Drafts, outlines, world-building, edits. A council of voices to push the work past the first idea, on your terms.</p>
+          </div>
+        </div>
+        <p class="section-note">Whatever you use it for, BoB adapts. Through LKS it learns your patterns, your preferences, and your project over time, so it gets better at your work the longer you use it.</p>
+      </section>
+
+      <!-- how it works -->
+      <section id="how" class="section section-alt">
+        <div class="section-head">
+          <h2>How BoB works</h2>
+          <p>Four steps, plain English in, working software out.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-n">1</span>
+            <div>
+              <h3>Plant your idea</h3>
+              <p>Tell BoB what you want built, in your own words. No spec, no jargon.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-n">2</span>
+            <div>
+              <h3>BoB asks the right questions</h3>
+              <p>A quick back-and-forth to fill the gaps, so it builds what you meant, not what it guessed.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-n">3</span>
+            <div>
+              <h3>BoB does the homework</h3>
+              <p>It researches what it doesn't know, with sources, instead of making things up.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-n">4</span>
+            <div>
+              <h3>The fleet builds it</h3>
+              <p>BoB's team of models produces the work, checks it, fixes what's off, and hands you something that holds up: code that runs, a doc that's right, a plan you can act on.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- idea to reality depth: council + memory -->
+      <section class="section">
+        <div class="section-head">
+          <h2>A brain and a memory behind every build.</h2>
+          <p>
+            What turns BoB from a code generator into something you'd trust with
+            a real project: it <em>deliberates</em> before it builds, and it
+            <em>remembers</em> what it learns.
+          </p>
+        </div>
+        <div class="features">
+          <div class="card">
+            <div class="card-ic">⚖</div>
+            <h3>A council, not a coin-flip</h3>
+            <p>
+              Your idea doesn't ride on one model's first guess.
+              <strong>CoCouncil Max</strong> convenes a panel of AI voices that
+              debate the design, fusing the strongest ideas, arguing the risky
+              ones down, grounding each decision before a line of code is
+              written. You get the plan that <em>survived scrutiny</em>, not the
+              first one that sounded good.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-ic">❖</div>
+            <h3>A memory, not a blank slate</h3>
+            <p>
+              BoB builds on a living local knowledge base called
+              <strong>LKS</strong>. It learns your project, your decisions, and
+              the way you like things done, then adapts. The more you work with
+              BoB, the better it fits how you work, instead of starting from zero
+              every session. Your context stays yours, on your machine.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- interoperability -->
+      <section id="open" class="section section-alt">
+        <div class="section-head">
+          <h2>Use BoB your way.</h2>
+          <p>
+            BoB is a layer, not a walled garden. It doesn't make you learn a new
+            system. It's built to be driven by the tools you already use, or
+            embedded inside the ones you build.
+          </p>
+        </div>
+        <div class="features">
+          <div class="card">
+            <div class="card-ic">⇄</div>
+            <h3>Drive it from your agent</h3>
+            <p>
+              Claude Code native and want to stay there? Neckbeard mode lets your
+              CC agent run BoB headlessly. Prefer OpenClaw, Hermes, or your own
+              agent? Point it at BoB. It speaks MCP and takes scoped tokens, so it
+              fits the setup you already have.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-ic">▣</div>
+            <h3>Or build it in</h3>
+            <p>
+              Shipping your own agent platform? Use BoB as an orchestration and
+              verification layer inside it. We don't just allow that, we actively
+              encourage other platforms to integrate BoB as a layer in their
+              systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- proof / the builder -->
+      <section id="story" class="section">
+        <div class="section-head">
+          <h2>BoB built BoB.</h2>
+          <p>
+            The best proof I have that this works: BoB largely built
+            <em>itself</em>. Across two unattended, multi-hour runs it wrote 400+
+            tests with zero regressions, on commodity models, for a few dollars
+            each. Its own verification caught the mistakes I planted to try to
+            trip it up. Software is the hardest thing I've thrown at it; the same
+            harness handles the research, the writing, and the day-to-day you'd
+            actually use it for.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div><span class="stat-n">400+</span><span class="stat-l">tests written, zero regressions</span></div>
+          <div><span class="stat-n">~$3-4</span><span class="stat-l">per multi-hour build run</span></div>
+          <div><span class="stat-n">0</span><span class="stat-l">people watching it work</span></div>
+        </div>
+
+        <div class="builder">
+          <p>
+            And it's <strong>one person</strong>. I'm Travis. I designed the
+            harness; a fleet of cheap models did the actual typing and checked
+            each other's work so I didn't have to. That's the whole idea. You
+            don't need a frontier lab or a team of ten. You need a good harness
+            and models you own.
+          </p>
+          <p class="builder-kicker">BoB is that harness, packaged so it can join <em>your</em> team.</p>
+        </div>
+      </section>
+
+      <!-- philosophy -->
+      <section class="band band-green">
+        <div class="band-inner">
+          <p class="eyebrow eyebrow-light">The Canopy Seed idea</p>
+          <h2>Plant it. Grow it. Own it.</h2>
+          <p>
+            A seed, in the right conditions, grows into something far bigger than
+            the seed. Software should work the same way: plant an idea, let it
+            grow, and own the thing that grows. Not rented. Not revocable. Yours,
+            like a tree you planted that no one can come and uproot.
+          </p>
+          <p class="strong">BoB is the first of the canopy. The rest of the ecosystem grows from the same root: your AI, on your terms.</p>
+        </div>
+      </section>
+
+      <!-- get BoB -->
+      <section id="get" class="section get">
+        <img src="/icon/bob-crest-inv-gray.png" alt="BoB crest" class="get-art" width="150" loading="lazy" />
+        <h2>Add BoB to your team.</h2>
+        <p>Open source. Local-first. Your keys, your machine. No subscription.</p>
+        <div class="cta-row cta-center">
+          <a class="btn btn-lg" href={RELEASES} target="_blank" rel="noopener">Download BoB, free</a>
+          <a class="btn btn-ghost btn-lg" href={GITHUB} target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <span class="brand-badge"><img src="/icon/bob-crest-inv-gray.png" alt="" width="44" height="44" /></span>
+        <div>
+          <p class="brand-name">BoB</p>
+          <p class="footer-by">a Canopy Seed project</p>
+        </div>
+      </div>
+      <nav class="footer-links">
+        <a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
+        <a href={RELEASES} target="_blank" rel="noopener">Download</a>
+        <a href="#how">How it works</a>
+        <a href="#story">The story</a>
+      </nav>
+      <p class="footer-fine">
+        Built solo, with a lot of help from some very cheap models.<br />
+        © 2026 Canopy Seed
+      </p>
+    </footer>
+
+    <style is:global>
+      :root {
+        --bg: #0a120e;
+        --bg-2: #0e1813;
+        --surface: #122019;
+        --line: #1f3329;
+        --text: #eaf2ec;
+        --muted: #9bb0a4;
+        --green: #46c97f;
+        --green-2: #67e09a;
+        --green-dark: #134a30;
+        --blue: #38c5e0;
+        --maxw: 1120px;
+        --r: 16px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: radial-gradient(1200px 700px at 70% -10%, #16271e 0%, var(--bg) 55%) no-repeat, var(--bg);
+        color: var(--text);
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, .brand-name { font-family: "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.02em; }
+      h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.02; margin: 0 0 1.1rem; font-weight: 700; }
+      h2 { font-size: clamp(1.7rem, 3.6vw, 2.6rem); line-height: 1.1; margin: 0 0 1rem; font-weight: 600; }
+      h3 { font-size: 1.18rem; margin: 0 0 0.4rem; font-weight: 600; }
+      p { margin: 0 0 1rem; }
+      a { color: inherit; text-decoration: none; }
+      em { font-style: normal; color: var(--green-2); }
+      section { padding: 0 24px; }
+
+      /* nav */
+      .nav {
+        max-width: var(--maxw); margin: 0 auto; padding: 22px 24px;
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      }
+      .brand { display: flex; align-items: center; gap: 11px; }
+      .brand-badge { display: inline-grid; place-items: center; background: var(--green-dark); border-radius: 13px; padding: 7px; box-shadow: 0 3px 14px rgba(70,201,127,0.28); }
+      .brand-badge img { display: block; }
+      .brand-name { font-size: 1.4rem; font-weight: 700; }
+      .brand-by { color: var(--muted); font-size: 0.82rem; }
+      .nav-links { display: flex; align-items: center; gap: 26px; }
+      .nav-links a { color: var(--muted); font-size: 0.95rem; transition: color 0.15s; }
+      .nav-links a:hover { color: var(--text); }
+      .nav-links a.btn, .nav-links a.btn:hover { color: #000; }
+
+      /* buttons */
+      .btn {
+        display: inline-block; background: var(--green); color: #000; font-weight: 600;
+        padding: 11px 20px; border-radius: 999px; transition: transform 0.12s, background 0.15s;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .btn:hover { background: var(--green-2); transform: translateY(-1px); }
+      .btn-sm { padding: 8px 16px; font-size: 0.9rem; }
+      .btn-lg { padding: 14px 26px; font-size: 1.05rem; }
+      .btn-ghost { background: transparent; color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+      .btn-ghost:hover { background: var(--surface); box-shadow: inset 0 0 0 1px var(--green); color: var(--text); }
+
+      .eyebrow { color: var(--green); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.9rem; }
+      .eyebrow-light { color: #0a3d22; }
+
+      /* hero */
+      .hero {
+        max-width: var(--maxw); margin: 0 auto; padding-top: 40px; padding-bottom: 70px;
+        display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: center;
+      }
+      .lede { font-size: 1.22rem; color: #cfe0d6; max-width: 33ch; }
+      .cta-row { display: flex; gap: 14px; margin-top: 1.6rem; flex-wrap: wrap; }
+      .cta-center { justify-content: center; }
+      .trust { margin-top: 1.3rem; color: var(--muted); font-size: 0.9rem; }
+      .hero-art { display: flex; justify-content: center; }
+      .hero-art img { max-width: 100%; height: auto; filter: drop-shadow(0 24px 50px rgba(0,0,0,0.55)); }
+
+      /* bands */
+      .band { padding-top: 64px; padding-bottom: 64px; background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .band-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+      .band-inner p { font-size: 1.15rem; color: #cfe0d6; }
+      .strong { color: var(--text); font-weight: 600; }
+      .pull { font-family: "Space Grotesk", sans-serif; font-size: 1.5rem; color: var(--green-2); margin-top: 1.4rem; font-weight: 600; }
+      .band-green { background: linear-gradient(180deg, #2ca866, #1f8e54); border-color: transparent; color: #06140c; }
+      .band-green h2, .band-green .strong { color: #07150d; }
+      .band-green p { color: #0a2417; }
+
+      /* generic section */
+      .section { max-width: var(--maxw); margin: 0 auto; padding-top: 78px; padding-bottom: 78px; }
+      .section-alt { background: var(--bg-2); max-width: none; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .section-alt .section-head, .section-alt .steps, .section-alt .features, .section-alt .use-cases { max-width: var(--maxw); margin-left: auto; margin-right: auto; }
+      .section-head { max-width: 640px; margin-bottom: 2.6rem; }
+      .section-head > p { font-size: 1.12rem; color: var(--muted); }
+      .section-note { max-width: 760px; margin: 2.2rem 0 0; color: var(--muted); font-size: 1.05rem; }
+
+      /* cards */
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 26px; }
+      .card-ic { width: 42px; height: 42px; border-radius: 11px; background: rgba(70,201,127,0.12); color: var(--green-2);
+        display: grid; place-items: center; font-size: 1.3rem; margin-bottom: 16px; }
+      .card p { color: var(--muted); margin: 0; }
+      .features { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+      .features .card p { font-size: 1.02rem; }
+      .use-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+      /* steps */
+      .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 40px; }
+      .steps li { display: flex; gap: 18px; align-items: flex-start; }
+      .step-n { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--surface); border: 1px solid var(--green);
+        color: var(--green-2); font-family: "Space Grotesk", sans-serif; font-weight: 700; display: grid; place-items: center; }
+      .steps p { color: var(--muted); margin: 0; }
+
+      /* stats + builder */
+      .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 2.6rem; text-align: center; }
+      .stats > div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 26px 18px; }
+      .stat-n { display: block; font-family: "Space Grotesk", sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--green-2); }
+      .stat-l { color: var(--muted); font-size: 0.92rem; }
+      .builder { max-width: 760px; }
+      .builder p { font-size: 1.15rem; color: #cfe0d6; }
+      .builder-kicker { font-family: "Space Grotesk", sans-serif; color: var(--text); font-weight: 600; font-size: 1.25rem; }
+
+      /* get */
+      .get { text-align: center; }
+      .get-art { display: block; margin: 0 auto 1.4rem; width: 150px; height: auto; filter: drop-shadow(0 10px 26px rgba(0,0,0,0.5)); }
+      .get > p { color: var(--muted); font-size: 1.1rem; }
+
+      /* footer */
+      .footer { max-width: var(--maxw); margin: 0 auto; padding: 50px 24px; border-top: 1px solid var(--line);
+        display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+      .footer-brand { display: flex; align-items: center; gap: 12px; }
+      .footer-brand .brand-name { font-size: 1.2rem; margin: 0; }
+      .footer-by, .footer-fine { color: var(--muted); font-size: 0.85rem; margin: 0; }
+      .footer-links { display: flex; gap: 22px; }
+      .footer-links a { color: var(--muted); font-size: 0.92rem; }
+      .footer-links a:hover { color: var(--text); }
+      .footer-fine { text-align: right; line-height: 1.5; }
+
+      /* responsive */
+      @media (max-width: 860px) {
+        .hero { grid-template-columns: 1fr; text-align: center; padding-top: 16px; }
+        .hero-copy { order: 2; }
+        .hero-art { order: 1; }
+        .hero-art img { max-width: 320px; }
+        .lede { max-width: none; margin-inline: auto; }
+        .cta-row { justify-content: center; }
+        .cards, .stats, .features, .use-cases { grid-template-columns: 1fr; }
+        .steps { grid-template-columns: 1fr; }
+        .nav-links { gap: 16px; }
+        .nav-links a:not(.btn) { display: none; }
+        .footer { flex-direction: column; text-align: center; }
+        .footer-fine { text-align: center; }
+      }
+    </style>
+  </body>
+</html>
