@@ -1,6 +1,6 @@
 import en from './en.json';
 import es from './es.json';
-import zhHans from './zh-Hans.json';
+import zhHans from './zh-hans.json';
 import ja from './ja.json';
 import pt from './pt.json';
 
@@ -12,7 +12,7 @@ export const defaultLang = 'en' as const;
 export const languages = {
   en,
   es,
-  'zh-Hans': zhHans,
+  'zh-hans': zhHans,
   ja,
   pt,
 } as const;
@@ -25,7 +25,7 @@ export const nonDefaultLocales = locales.filter((l) => l !== defaultLang);
 export const langLabels: Record<Lang, string> = {
   en: 'English',
   es: 'Español',
-  'zh-Hans': '简体中文',
+  'zh-hans': '简体中文',
   ja: '日本語',
   pt: 'Português',
 };

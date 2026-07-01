@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { render } from 'astro:content';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { useTranslations, slugOf } from '../../i18n/utils';
 
 const { entry, locale = 'en' } = Astro.props;
@@ -12,7 +13,7 @@ const slug = slugOf(entry);
 
 <Base lang={locale} path={`/knowledge/${slug}/`} title={`${d.title}${t('meta.entrySuffix')}`} description={d.description}>
   <article class="entry">
-    <a class="entry-back" href="/knowledge">{t('knowledge.back')}</a>
+    <a class="entry-back" href={getRelativeLocaleUrl(locale, '/knowledge')}>{t('knowledge.back')}</a>
     <header class="entry-head">
       <div class="kn-tags">
         <span class="kn-badge cat">{t(`knowledge.category.${d.category}`)}</span>

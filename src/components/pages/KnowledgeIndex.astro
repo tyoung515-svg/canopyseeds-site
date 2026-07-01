@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { useTranslations, localeOf, slugOf, pickEntry, defaultLang } from '../../i18n/utils';
 
 const { locale = 'en' } = Astro.props;
@@ -42,7 +43,7 @@ const categories = ['Papers', 'Tutorials', 'Work Shapes', 'Architecture'];
     <div class="kn-grid" id="grid">
       {
         entries.map((e) => (
-          <a class="kn-card" href={`/knowledge/${slugOf(e)}/`} data-cat={e.data.category} data-fmt={e.data.format}>
+          <a class="kn-card" href={getRelativeLocaleUrl(locale, `/knowledge/${slugOf(e)}/`)} data-cat={e.data.category} data-fmt={e.data.format}>
             <div class="kn-tags">
               <span class="kn-badge cat">{t(`knowledge.category.${e.data.category}`)}</span>
               <span class="kn-badge fmt">{t(`knowledge.format.${e.data.format}`)}</span>

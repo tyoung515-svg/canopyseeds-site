@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { getAbsoluteLocaleUrl } from 'astro:i18n';
+import { locales, defaultLang } from '../i18n/utils';
 
 const {
   lang = 'en',
@@ -25,12 +27,23 @@ const {
     <meta property="og:description" content={ogDescription} />
     <meta property="og:image" content="/brand/bob-crest.png" />
     <meta name="theme-color" content="#0a120e" />
+    <link rel="canonical" href={getAbsoluteLocaleUrl(lang, path)} />
+    {locales.map((l) => (
+      <link rel="alternate" hreflang={l} href={getAbsoluteLocaleUrl(l, path)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl(defaultLang, path)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    {lang === 'zh-Hans' && (
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    )}
+    {lang === 'ja' && (
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    )}
   </head>
   <body>
     <Nav locale={lang} path={path} />

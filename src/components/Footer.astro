@@ -1,8 +1,13 @@
 ---
 import { GITHUB, RELEASES } from '../consts';
 import { useTranslations } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
 const { locale = 'en', path = '/' } = Astro.props;
 const t = useTranslations(locale);
+let base = getRelativeLocaleUrl(locale, '/');
+if (!base.endsWith('/')) base += '/';
+const knHref = getRelativeLocaleUrl(locale, '/knowledge');
 ---
 <footer class="footer">
   <div class="footer-brand">
@@ -15,9 +20,9 @@ const t = useTranslations(locale);
   <nav class="footer-links">
     <a href={GITHUB} target="_blank" rel="noopener">{t('footer.github')}</a>
     <a href={RELEASES} target="_blank" rel="noopener">{t('footer.download')}</a>
-    <a href="/#how">{t('footer.how')}</a>
-    <a href="/#story">{t('footer.story')}</a>
-    <a href="/knowledge">{t('footer.knowledge')}</a>
+    <a href={`${base}#how`}>{t('footer.how')}</a>
+    <a href={`${base}#story`}>{t('footer.story')}</a>
+    <a href={knHref}>{t('footer.knowledge')}</a>
   </nav>
   <p class="footer-fine">{t('footer.fine')}<br />{t('footer.copyright')}</p>
 </footer>

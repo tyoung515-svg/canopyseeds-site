@@ -209,3 +209,28 @@ section { padding: 0 24px; }
   .footer { flex-direction: column; text-align: center; }
   .footer-fine { text-align: center; }
 }
+
+/* language switcher */
+.lang-switcher {
+  appearance: none; -webkit-appearance: none;
+  background: var(--surface); color: var(--muted);
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 12px; font-family: "Inter", sans-serif; font-size: 0.9rem;
+  cursor: pointer; transition: color 0.15s, border-color 0.15s;
+}
+.lang-switcher:hover { color: var(--text); border-color: var(--green); }
+.lang-switcher option { background: var(--bg-2); color: var(--text); }
+
+/* CJK font stacks (families loaded only on those locales; Latin still uses Inter / Space Grotesk) */
+html[lang="zh-Hans"] body { font-family: "Inter", "Noto Sans SC", system-ui, -apple-system, sans-serif; }
+html[lang="ja"] body { font-family: "Inter", "Noto Sans JP", system-ui, -apple-system, sans-serif; }
+html[lang="zh-Hans"] h1, html[lang="zh-Hans"] h2, html[lang="zh-Hans"] h3, html[lang="zh-Hans"] .brand-name,
+html[lang="zh-Hans"] .pull, html[lang="zh-Hans"] .btn, html[lang="zh-Hans"] .stat-n, html[lang="zh-Hans"] .step-n,
+html[lang="zh-Hans"] .bob-cap, html[lang="zh-Hans"] .builder-kicker {
+  font-family: "Space Grotesk", "Noto Sans SC", system-ui, sans-serif;
+}
+html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3, html[lang="ja"] .brand-name,
+html[lang="ja"] .pull, html[lang="ja"] .btn, html[lang="ja"] .stat-n, html[lang="ja"] .step-n,
+html[lang="ja"] .bob-cap, html[lang="ja"] .builder-kicker {
+  font-family: "Space Grotesk", "Noto Sans JP", system-ui, sans-serif;
+}
