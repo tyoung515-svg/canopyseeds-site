@@ -1,24 +1,26 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+import { useTranslations } from '../../i18n/utils';
 
 export async function getStaticPaths() {
   const entries = await getCollection('knowledge');
   return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 
+const t = useTranslations('en');
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
 ---
 
-<Base title={`${d.title} · BoB`} description={d.description}>
+<Base title={`${d.title}${t('meta.entrySuffix')}`} description={d.description}>
   <article class="entry">
-    <a class="entry-back" href="/knowledge">← Knowledge</a>
+    <a class="entry-back" href="/knowledge">{t('knowledge.back')}</a>
     <header class="entry-head">
       <div class="kn-tags">
-        <span class="kn-badge cat">{d.category}</span>
-        <span class="kn-badge fmt">{d.format}</span>
+        <span class="kn-badge cat">{t(`knowledge.category.${d.category}`)}</span>
+        <span class="kn-badge fmt">{t(`knowledge.format.${d.format}`)}</span>
       </div>
       <h1>{d.title}</h1>
       <p class="entry-desc">{d.description}</p>

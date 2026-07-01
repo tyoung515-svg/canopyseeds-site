@@ -1,18 +1,20 @@
 ---
 import { GITHUB, RELEASES } from '../consts';
+import { useTranslations } from '../i18n/utils';
 const { locale = 'en', path = '/' } = Astro.props;
+const t = useTranslations(locale);
 ---
 <header class="nav">
   <a class="brand" href="/">
     <span class="brand-badge"><img src="/icon/bob-crest-inv-gray.png" alt="" width="42" height="42" /></span>
     <span class="brand-name">BoB</span>
-    <span class="brand-by">by Canopy Seed</span>
+    <span class="brand-by">{t('nav.brandBy')}</span>
   </a>
   <nav class="nav-links">
-    <a href="/#how">How it works</a>
-    <a href="/#why">Why</a>
-    <a href="/knowledge">Knowledge</a>
-    <a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
-    <a class="btn btn-sm" href={RELEASES} target="_blank" rel="noopener">Get BoB</a>
+    <a href="/#how">{t('nav.how')}</a>
+    <a href="/#why">{t('nav.why')}</a>
+    <a href="/knowledge">{t('nav.knowledge')}</a>
+    <a href={GITHUB} target="_blank" rel="noopener">{t('nav.github')}</a>
+    <a class="btn btn-sm" href={RELEASES} target="_blank" rel="noopener">{t('nav.getBob')}</a>
   </nav>
 </header>

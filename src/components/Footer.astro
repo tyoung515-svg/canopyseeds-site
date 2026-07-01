@@ -1,24 +1,23 @@
 ---
 import { GITHUB, RELEASES } from '../consts';
+import { useTranslations } from '../i18n/utils';
 const { locale = 'en', path = '/' } = Astro.props;
+const t = useTranslations(locale);
 ---
 <footer class="footer">
   <div class="footer-brand">
     <span class="brand-badge"><img src="/icon/bob-crest-inv-gray.png" alt="" width="44" height="44" /></span>
     <div>
       <p class="brand-name">BoB</p>
-      <p class="footer-by">a Canopy Seed project</p>
+      <p class="footer-by">{t('footer.by')}</p>
     </div>
   </div>
   <nav class="footer-links">
-    <a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
-    <a href={RELEASES} target="_blank" rel="noopener">Download</a>
-    <a href="/#how">How it works</a>
-    <a href="/#story">The story</a>
-    <a href="/knowledge">Knowledge</a>
+    <a href={GITHUB} target="_blank" rel="noopener">{t('footer.github')}</a>
+    <a href={RELEASES} target="_blank" rel="noopener">{t('footer.download')}</a>
+    <a href="/#how">{t('footer.how')}</a>
+    <a href="/#story">{t('footer.story')}</a>
+    <a href="/knowledge">{t('footer.knowledge')}</a>
   </nav>
-  <p class="footer-fine">
-    Built solo, with a lot of help from some very cheap models.<br />
-    © 2026 Canopy Seed
-  </p>
+  <p class="footer-fine">{t('footer.fine')}<br />{t('footer.copyright')}</p>
 </footer>
