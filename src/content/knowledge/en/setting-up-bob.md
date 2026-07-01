@@ -5,7 +5,7 @@ category: "Tutorials"
 format: "Write-up"
 date: 2026-07-01
 order: 1
-draft: true
+draft: false
 ---
 
 This is the shortest honest path from nothing to a running BoB on your own machine. **v0.96 is Windows-only and headless-first**: the command-line, MCP, and agent front door works today; the web and desktop GUIs ship as a *preview*. Everything runs on `127.0.0.1` by default, with your keys, on your box. Nobody in the middle.
