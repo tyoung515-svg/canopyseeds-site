@@ -1,0 +1,11 @@
+---
+import KnowledgeIndex from '../../../components/pages/KnowledgeIndex.astro';
+import { nonDefaultLocales } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return nonDefaultLocales.map((locale) => ({ params: { locale }, props: { locale } }));
+}
+
+const { locale } = Astro.props;
+---
+<KnowledgeIndex locale={locale} />

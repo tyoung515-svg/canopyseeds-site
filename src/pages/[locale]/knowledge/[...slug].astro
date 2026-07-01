@@ -1,0 +1,21 @@
+---
+import KnowledgeEntry from '../../../components/pages/KnowledgeEntry.astro';
+import { getCollection } from 'astro:content';
+import { nonDefaultLocales, localeOf, slugOf, pickEntry } from '../../../i18n/utils';
+
+export async function getStaticPaths() {
+  const all = await getCollection('knowledge');
+  const englishSlugs = [...new Set(all.filter((e) => localeOf(e) === 'en').map(slugOf))];
+  const paths = [];
+  for (const locale of nonDefaultLocales) {
+    for (const slug of englishSlugs) {
+      const entry = pickEntry(all, locale, slug);
+      paths.push({ params: { locale, slug }, props: { entry, locale } });
+    }
+  }
+  return paths;
+}
+
+const { entry, locale } = Astro.props;
+---
+<KnowledgeEntry entry={entry} locale={locale} />

@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import { render } from 'astro:content';
+import { useTranslations, slugOf } from '../../i18n/utils';
+
+const { entry, locale = 'en' } = Astro.props;
+const t = useTranslations(locale);
+const { Content } = await render(entry);
+const d = entry.data;
+const slug = slugOf(entry);
+---
+
+<Base lang={locale} path={`/knowledge/${slug}/`} title={`${d.title}${t('meta.entrySuffix')}`} description={d.description}>
+  <article class="entry">
+    <a class="entry-back" href="/knowledge">{t('knowledge.back')}</a>
+    <header class="entry-head">
+      <div class="kn-tags">
+        <span class="kn-badge cat">{t(`knowledge.category.${d.category}`)}</span>
+        <span class="kn-badge fmt">{t(`knowledge.format.${d.format}`)}</span>
+      </div>
+      <h1>{d.title}</h1>
+      <p class="entry-desc">{d.description}</p>
+    </header>
+
+    {
+      d.videoEmbed && (
+        <div class="entry-media">
+          <div class="ratio">
+            <iframe
+              src={d.videoEmbed}
+              title={d.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        </div>
+      )
+    }
+    {d.audioSrc && (<div class="entry-media"><audio controls src={d.audioSrc} /></div>)}
+    {
+      d.appSrc && (
+        <div class="entry-media">
+          <div class="ratio">
+            <iframe src={d.appSrc} title={d.title} />
+          </div>
+        </div>
+      )
+    }
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
