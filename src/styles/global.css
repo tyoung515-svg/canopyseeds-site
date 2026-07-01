@@ -213,9 +213,10 @@ section { padding: 0 24px; }
 /* language switcher */
 .lang-switcher {
   appearance: none; -webkit-appearance: none;
-  background: var(--surface); color: var(--muted);
+  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239bb0a4' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 11px center;
+  color: var(--muted);
   border: 1px solid var(--line); border-radius: 999px;
-  padding: 7px 12px; font-family: "Inter", sans-serif; font-size: 0.9rem;
+  padding: 7px 30px 7px 13px; font-family: "Inter", sans-serif; font-size: 0.9rem;
   cursor: pointer; transition: color 0.15s, border-color 0.15s;
 }
 .lang-switcher:hover { color: var(--text); border-color: var(--green); }
