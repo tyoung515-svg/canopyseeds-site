@@ -74,6 +74,28 @@ const RELEASES = "https://github.com/tyoung515-svg/canopy-seed/releases";
         </div>
       </section>
 
+      <!-- what the name means -->
+      <section class="backronym">
+        <div class="backronym-inner">
+          <p class="eyebrow">What the name means</p>
+          <h2>BoB isn't just a name.</h2>
+          <div class="bob-letters">
+            <div class="bob-letter">
+              <h3><span class="bob-cap">B</span>uild</h3>
+              <p>Turns your plain-English idea into finished work: code, a research report, a document, a tool that runs.</p>
+            </div>
+            <div class="bob-letter">
+              <h3><span class="bob-cap">O</span>rchestrate</h3>
+              <p>Runs a fleet of models that plan, cross-check, and fix each other's work, so no single one is load-bearing.</p>
+            </div>
+            <div class="bob-letter">
+              <h3><span class="bob-cap">B</span>ind</h3>
+              <p>Ties every result to proof, a source or a passing test, and into your own memory, so it holds up and compounds.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- the moment -->
       <section class="band">
         <div class="band-inner">
@@ -432,6 +454,15 @@ const RELEASES = "https://github.com/tyoung515-svg/canopy-seed/releases";
       .hero-art { display: flex; justify-content: center; }
       .hero-art img { max-width: 100%; height: auto; filter: drop-shadow(0 24px 50px rgba(0,0,0,0.55)); }
 
+      /* backronym */
+      .backronym { max-width: var(--maxw); margin: 0 auto; padding-top: 66px; padding-bottom: 66px; text-align: center; }
+      .backronym-inner { max-width: 940px; margin: 0 auto; }
+      .backronym h2 { margin-bottom: 2.2rem; }
+      .bob-letters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; text-align: left; }
+      .bob-letter h3 { display: flex; align-items: baseline; font-size: 1.4rem; margin-bottom: 0.5rem; }
+      .bob-cap { font-family: "Space Grotesk", sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--green); line-height: 0.9; }
+      .bob-letter p { color: var(--muted); margin: 0; }
+
       /* bands */
       .band { padding-top: 64px; padding-bottom: 64px; background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
       .band-inner { max-width: 780px; margin: 0 auto; text-align: center; }
@@ -500,7 +531,7 @@ const RELEASES = "https://github.com/tyoung515-svg/canopy-seed/releases";
         .hero-art img { max-width: 320px; }
         .lede { max-width: none; margin-inline: auto; }
         .cta-row { justify-content: center; }
-        .cards, .stats, .features, .use-cases { grid-template-columns: 1fr; }
+        .cards, .stats, .features, .use-cases, .bob-letters { grid-template-columns: 1fr; }
         .steps { grid-template-columns: 1fr; }
         .nav-links { gap: 16px; }
         .nav-links a:not(.btn) { display: none; }
