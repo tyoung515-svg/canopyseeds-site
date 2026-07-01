@@ -1,151 +1,151 @@
 {
   "nav": {
-    "brandBy": "by Canopy Seed",
-    "how": "How it works",
-    "why": "Why",
-    "knowledge": "Knowledge",
+    "brandBy": "由 Canopy Seed 出品",
+    "how": "工作原理",
+    "why": "为什么",
+    "knowledge": "知识库",
     "github": "GitHub",
-    "getBob": "Get BoB"
+    "getBob": "获取 BoB"
   },
   "footer": {
-    "by": "a Canopy Seed project",
+    "by": "一个 Canopy Seed 项目",
     "github": "GitHub",
-    "download": "Download",
-    "how": "How it works",
-    "story": "The story",
-    "knowledge": "Knowledge",
-    "fine": "Built solo, with a lot of help from some very cheap models.",
+    "download": "下载",
+    "how": "工作原理",
+    "story": "故事",
+    "knowledge": "知识库",
+    "fine": "由一个人独立打造，并借助了一些非常廉价的模型的大量帮助。",
     "copyright": "© 2026 Canopy Seed"
   },
   "meta": {
     "home": {
-      "title": "BoB · Own your AI. BoB does the rest.",
-      "description": "BoB turns a plain-English idea into finished, checked work: code, research, documents, and more. Local-first, no subscription, no lock-in. A Canopy Seed project.",
-      "ogDescription": "An AI teammate that turns ideas into finished work on models you own, for pennies, and can't be export-banned."
+      "title": "BoB · 拥有你的 AI。剩下的交给 BoB。",
+      "description": "BoB 把一个用大白话表达的想法，变成完成并经过核验的成果：代码、研究、文档等等。本地优先，无需订阅，无锁定。一个 Canopy Seed 项目。",
+      "ogDescription": "一个 AI 队友，在你自己拥有的模型上，以极低成本把想法变成完成的成果，且无法被出口禁令切断。"
     },
     "knowledge": {
-      "title": "Knowledge · BoB",
-      "description": "Papers, tutorials, work shapes, and architecture for BoB and the Canopy Seed philosophy."
+      "title": "知识库 · BoB",
+      "description": "关于 BoB 与 Canopy Seed 理念的论文、教程、工作范式与架构。"
     },
     "entrySuffix": " · BoB"
   },
   "home": {
     "hero": {
-      "eyebrow": "A Canopy Seed project",
-      "titleLine1": "Own your AI.",
-      "titleLine2": "BoB does the rest.",
-      "lede": "BoB turns a plain-English idea into finished, checked work: code, a research report, a business tool, a first draft. Local-first, no subscription, no lock-in. The intelligence is rented from whoever's cheapest this week. The thing you <em>own</em> is BoB.",
-      "ctaPrimary": "Get BoB, free",
-      "ctaSecondary": "How it works",
-      "trust": "Runs on your machine, with your keys · open source · pennies a build",
-      "artAlt": "BoB, a Highlander hoisting a mechanical keyboard overhead"
+      "eyebrow": "一个 Canopy Seed 项目",
+      "titleLine1": "拥有你的 AI。",
+      "titleLine2": "剩下的交给 BoB。",
+      "lede": "BoB 把一个用大白话表达的想法，变成完成并经过核验的成果：代码、一份研究报告、一个业务工具、一份初稿。本地优先，无需订阅，无锁定。智能是从本周最便宜的那家租来的。你真正<em>拥有</em>的，是 BoB。",
+      "ctaPrimary": "免费获取 BoB",
+      "ctaSecondary": "工作原理",
+      "trust": "在你自己的机器上、用你自己的密钥运行 · 开源 · 每次构建仅需几分钱",
+      "artAlt": "BoB，一位把机械键盘高举过头的高地人"
     },
     "backronym": {
-      "eyebrow": "What the name means",
-      "heading": "BoB isn't just a name.",
-      "buildBody": "Turns your plain-English idea into finished work: code, a research report, a document, a tool that runs.",
-      "orchestrateBody": "Runs a fleet of models that plan, cross-check, and fix each other's work, so no single one is load-bearing.",
-      "bindBody": "Ties every result to proof, a source or a passing test, and into your own memory, so it holds up and compounds."
+      "eyebrow": "这个名字的含义",
+      "heading": "BoB 不只是一个名字。",
+      "buildBody": "把你用大白话表达的想法变成完成的成果：代码、一份研究报告、一份文档、一个能运行的工具。",
+      "orchestrateBody": "运行一支模型舰队，让它们相互规划、交叉核验并修正彼此的工作，因此没有任何单一模型是不可或缺的。",
+      "bindBody": "把每一个结果都绑定到证据——一份来源或一个通过的测试——并绑定到你自己的记忆里，因此它经得起检验，并不断累积。"
     },
     "moment": {
-      "heading": "The week everyone learned you don't own what you rent.",
-      "body": "On June 12, 2026, the world's most capable AI model was switched off by a single government order. For everyone, in an afternoon, paying customers included. If your work lived on that model, your work stopped.",
-      "strong": "BoB's didn't. Because BoB never depended on any one model in the first place.",
-      "pull": "Rent the intelligence. Own the worker."
+      "heading": "所有人都在这一周学到：租来的东西并不属于你。",
+      "body": "2026 年 6 月 12 日，全世界最强的 AI 模型被一纸政府命令关停。对所有人而言，就在一个下午之间，付费客户也不例外。如果你的工作依附在那个模型上，你的工作就停了。",
+      "strong": "BoB 的工作没有停。因为 BoB 从一开始就没有依赖任何单一模型。",
+      "pull": "租用智能。拥有工人。"
     },
     "why": {
-      "heading": "Not one more place to call an API.",
-      "intro": "Plenty of tools route your prompt to a dozen models. That's table stakes, and it doesn't save you when the model you rely on disappears, or quietly hands you a wrong answer. BoB adds the part that actually matters.",
-      "card1Title": "Checks its own work",
-      "card1Body": "Every meaningful step is verified by a <em>different</em> family of model before it's trusted. Cheap models, kept honest, so you can actually rely on what comes out.",
-      "card2Title": "Finishes the job",
-      "card2Body": "Not a single answer. A small fleet that plans, builds, tests, fixes what's broken, and hands you something that runs. BoB is a teammate, not a chatbox.",
-      "card3Title": "Can't be taken away",
-      "card3Body": "No single vendor is load-bearing. Ban one, swap it. Run it on your own machine if you want. There's nothing here to deprecate, reprice, or export-ban out from under you."
+      "heading": "不是又一个调用 API 的地方。",
+      "intro": "有很多工具能把你的提示词路由给十几个模型。那只是入场门槛，当你依赖的模型消失、或悄悄给你一个错误答案时，它救不了你。BoB 加上了真正重要的那部分。",
+      "card1Title": "核验自己的工作",
+      "card1Body": "每一个有意义的步骤，在被信任之前，都会由<em>另一个</em>系列的模型来核验。廉价的模型，被约束着保持诚实，因此你可以真正依赖它产出的东西。",
+      "card2Title": "把活干完",
+      "card2Body": "不是一个单一答案。而是一支小舰队，它规划、构建、测试、修复出问题的地方，交给你一个能运行的成果。BoB 是一个队友，不是一个聊天框。",
+      "card3Title": "无法被夺走",
+      "card3Body": "没有任何单一供应商是不可或缺的。封了一个，就换一个。想在自己的机器上运行也可以。这里没有任何东西会在你脚下被弃用、重新定价，或被出口禁令切断。"
     },
     "who": {
-      "heading": "Not just for coders.",
-      "intro": "BoB is a general-purpose worker. Software is what it's been proven on hardest, but the same harness researches, writes, and builds whatever you need.",
-      "devTitle": "Developers",
-      "devBody": "Apps, scripts, fixes, tests. Plain English to running code, checked before it ships.",
-      "kwTitle": "Knowledge workers",
-      "kwBody": "Research, summaries, analysis, reports, grounded in sources BoB actually re-reads, so the facts hold up.",
-      "bizTitle": "Small business",
-      "bizBody": "The tools and docs you'd normally hire out: a quote calculator, an inventory tracker, a policy doc, an outreach plan. Owned, not rented per seat.",
-      "writerTitle": "Writers & creatives",
-      "writerBody": "Drafts, outlines, world-building, edits. A council of voices to push the work past the first idea, on your terms.",
-      "note": "Whatever you use it for, BoB adapts. Through LKS it learns your patterns, your preferences, and your project over time, so it gets better at your work the longer you use it."
+      "heading": "不只是给程序员用的。",
+      "intro": "BoB 是一个通用的工人。软件是它被验证得最扎实的领域，但同一套框架也能研究、写作，并构建你需要的任何东西。",
+      "devTitle": "开发者",
+      "devBody": "应用、脚本、修复、测试。从大白话到可运行的代码，交付前已经过核验。",
+      "kwTitle": "知识工作者",
+      "kwBody": "研究、摘要、分析、报告，都扎根于 BoB 真正重新读过的来源，因此事实经得起推敲。",
+      "bizTitle": "小型企业",
+      "bizBody": "那些你平时会外包出去的工具和文档：一个报价计算器、一个库存追踪器、一份制度文档、一份外联计划。归你所有，而不是按席位租用。",
+      "writerTitle": "作家与创作者",
+      "writerBody": "草稿、大纲、世界观构建、修订。一个由多种声音组成的议会，按你的方式，把作品推过最初的想法。",
+      "note": "无论你用它做什么，BoB 都会适配。通过 LKS，它会随时间学习你的模式、你的偏好和你的项目，因此你用得越久，它就越擅长你的工作。"
     },
     "how": {
-      "heading": "How BoB works",
-      "intro": "Four steps, plain English in, working software out.",
-      "step1Title": "Plant your idea",
-      "step1Body": "Tell BoB what you want built, in your own words. No spec, no jargon.",
-      "step2Title": "BoB asks the right questions",
-      "step2Body": "A quick back-and-forth to fill the gaps, so it builds what you meant, not what it guessed.",
-      "step3Title": "BoB does the homework",
-      "step3Body": "It researches what it doesn't know, with sources, instead of making things up.",
-      "step4Title": "The fleet builds it",
-      "step4Body": "BoB's team of models produces the work, checks it, fixes what's off, and hands you something that holds up: code that runs, a doc that's right, a plan you can act on."
+      "heading": "BoB 如何工作",
+      "intro": "四个步骤，大白话进，可运行的软件出。",
+      "step1Title": "种下你的想法",
+      "step1Body": "用你自己的话，告诉 BoB 你想构建什么。无需规格说明，无需行话。",
+      "step2Title": "BoB 提出正确的问题",
+      "step2Body": "一段快速的往返对话来补齐缺口，因此它构建的是你的本意，而不是它猜测的东西。",
+      "step3Title": "BoB 做功课",
+      "step3Body": "对于它不了解的东西，它会带着来源去研究，而不是凭空编造。",
+      "step4Title": "舰队来构建",
+      "step4Body": "BoB 的模型团队产出成果，核验它，修正不对的地方，交给你一个经得起检验的成果：能运行的代码、正确的文档、可以据以行动的计划。"
     },
     "council": {
-      "heading": "A brain and a memory behind every build.",
-      "intro": "What turns BoB from a code generator into something you'd trust with a real project: it <em>deliberates</em> before it builds, and it <em>remembers</em> what it learns.",
-      "councilTitle": "A council, not a coin-flip",
-      "councilBody": "Your idea doesn't ride on one model's first guess. <strong>CoCouncil Max</strong> convenes a panel of AI voices that debate the design, fusing the strongest ideas, arguing the risky ones down, grounding each decision before a line of code is written. You get the plan that <em>survived scrutiny</em>, not the first one that sounded good.",
-      "memoryTitle": "A memory, not a blank slate",
-      "memoryBody": "BoB builds on a living local knowledge base called <strong>LKS</strong>. It learns your project, your decisions, and the way you like things done, then adapts. The more you work with BoB, the better it fits how you work, instead of starting from zero every session. Your context stays yours, on your machine."
+      "heading": "每一次构建背后，都有一个大脑和一份记忆。",
+      "intro": "这就是让 BoB 从一个代码生成器变成你敢托付真实项目的东西：它在构建之前会<em>审议</em>，并会<em>记住</em>它学到的东西。",
+      "councilTitle": "一个议会，而非抛硬币",
+      "councilBody": "你的想法不会押在某个模型的第一次猜测上。<strong>CoCouncil Max</strong> 召集一个由多个 AI 声音组成的专家组来辩论设计，融合最强的想法，驳倒有风险的想法，在写下一行代码之前为每个决策奠定依据。你得到的是<em>经受住推敲</em>的方案，而不是第一个听起来不错的方案。",
+      "memoryTitle": "一份记忆，而非一张白纸",
+      "memoryBody": "BoB 建立在一个名为 <strong>LKS</strong> 的、活的本地知识库之上。它会学习你的项目、你的决策，以及你喜欢的做事方式，然后适配。你与 BoB 合作得越多，它就越契合你的工作方式，而不是每次会话都从零开始。你的上下文始终属于你，留在你自己的机器上。"
     },
     "interop": {
-      "heading": "Use BoB your way.",
-      "intro": "BoB is a layer, not a walled garden. It doesn't make you learn a new system. It's built to be driven by the tools you already use, or embedded inside the ones you build.",
-      "driveTitle": "Drive it from your agent",
-      "driveBody": "Claude Code native and want to stay there? Neckbeard mode lets your CC agent run BoB headlessly. Prefer OpenClaw, Hermes, or your own agent? Point it at BoB. It speaks MCP and takes scoped tokens, so it fits the setup you already have.",
-      "buildInTitle": "Or build it in",
-      "buildInBody": "Shipping your own agent platform? Use BoB as an orchestration and verification layer inside it. We don't just allow that, we actively encourage other platforms to integrate BoB as a layer in their systems."
+      "heading": "按你的方式使用 BoB。",
+      "intro": "BoB 是一个层，而不是一座围墙花园。它不会逼你去学一套新系统。它被设计成可以由你已经在用的工具来驱动，或嵌入到你构建的工具内部。",
+      "driveTitle": "从你的智能体来驱动它",
+      "driveBody": "习惯了 Claude Code 并想留在那里？Neckbeard mode 让你的 CC 智能体以无界面方式运行 BoB。更喜欢 OpenClaw、Hermes，或你自己的智能体？把它指向 BoB 就行。它讲 MCP，接受受限范围的令牌，因此能融入你已有的配置。",
+      "buildInTitle": "或者把它构建进去",
+      "buildInBody": "在打造你自己的智能体平台？把 BoB 用作其中的编排与核验层。我们不只是允许这么做，还积极鼓励其他平台把 BoB 作为一个层集成到它们的系统里。"
     },
     "proof": {
-      "heading": "BoB built BoB.",
-      "body": "The best proof I have that this works: BoB largely built <em>itself</em>. Across four unattended runs, about thirty hours of autonomous work in total, it wrote 789 tests with zero regressions, on commodity models, for single-digit dollars each. Its own verification caught the mistakes I planted to try to trip it up. Software is the hardest thing I've thrown at it; the same harness handles the research, the writing, and the day-to-day you'd actually use it for.",
-      "stat1Label": "tests written, zero regressions",
-      "stat2Label": "unattended runs, all merged",
-      "stat3Label": "people watching it work",
-      "builder": "And it's <strong>one person</strong>. I'm Travis. I designed the harness; a fleet of cheap models did the actual typing and checked each other's work so I didn't have to. That's the whole idea. You don't need a frontier lab or a team of ten. You need a good harness and models you own.",
-      "kicker": "BoB is that harness, packaged so it can join <em>your</em> team."
+      "heading": "BoB 构建了 BoB。",
+      "body": "我手上最有力的证据是：BoB 在很大程度上构建了<em>它自己</em>。在四次无人值守的运行中，累计约三十小时的自主工作，它写了 789 个测试且零回归，全部在通用商品级模型上，每次仅花个位数美元。它自身的核验抓出了我特意埋下、想绊倒它的错误。软件是我扔给它的最难的东西；同一套框架也能处理研究、写作，以及你真正会用到的日常工作。",
+      "stat1Label": "个测试，零回归",
+      "stat2Label": "次无人值守运行，全部合并",
+      "stat3Label": "人在围观它工作",
+      "builder": "而且这只是<strong>一个人</strong>。我是 Travis。框架是我设计的；一支廉价模型的舰队完成了实际的敲代码，并相互核验彼此的工作，这样我就不必亲自动手。这就是全部的理念。你不需要一个前沿实验室或一支十人团队。你需要的是一套好的框架，以及你自己拥有的模型。",
+      "kicker": "BoB 就是那套框架，被打包好，以便加入<em>你的</em>团队。"
     },
     "philosophy": {
-      "eyebrow": "The Canopy Seed idea",
-      "heading": "Plant it. Grow it. Own it.",
-      "body": "A seed, in the right conditions, grows into something far bigger than the seed. Software should work the same way: plant an idea, let it grow, and own the thing that grows. Not rented. Not revocable. Yours, like a tree you planted that no one can come and uproot.",
-      "strong": "BoB is the first of the canopy. The rest of the ecosystem grows from the same root: your AI, on your terms."
+      "eyebrow": "Canopy Seed 的理念",
+      "heading": "种下它。养育它。拥有它。",
+      "body": "一颗种子，在合适的条件下，会长成远比种子本身庞大的东西。软件也应如此：种下一个想法，让它生长，并拥有生长出来的那个东西。不是租来的。不可被收回。是你的，就像你亲手种下、无人能来连根拔起的一棵树。",
+      "strong": "BoB 是这片林冠的第一棵。生态系统的其余部分，从同一条根上生长出来：你的 AI，按你的方式。"
     },
     "cta": {
-      "artAlt": "BoB crest",
-      "heading": "Add BoB to your team.",
-      "body": "Open source. Local-first. Your keys, your machine. No subscription.",
-      "primary": "Download BoB, free",
-      "secondary": "View on GitHub"
+      "artAlt": "BoB 徽章",
+      "heading": "把 BoB 加入你的团队。",
+      "body": "开源。本地优先。你的密钥，你的机器。无需订阅。",
+      "primary": "免费下载 BoB",
+      "secondary": "在 GitHub 上查看"
     }
   },
   "knowledge": {
-    "eyebrow": "Knowledge",
-    "title": "Learn BoB, and the thinking behind it.",
-    "intro": "Papers, tutorials, work shapes, and architecture. In writing, audio, video, and small apps you can poke at.",
-    "filterAll": "All",
-    "read": "Read →",
-    "moreSoon": "More coming soon in this category.",
-    "back": "← Knowledge",
+    "eyebrow": "知识库",
+    "title": "学习 BoB，以及它背后的思考。",
+    "intro": "论文、教程、工作范式与架构。以文字、音频、视频，以及你可以上手把玩的小应用呈现。",
+    "filterAll": "全部",
+    "read": "阅读 →",
+    "moreSoon": "此分类下更多内容即将推出。",
+    "back": "← 知识库",
     "category": {
-      "Papers": "Papers",
-      "Tutorials": "Tutorials",
-      "Work Shapes": "Work Shapes",
-      "Architecture": "Architecture"
+      "Papers": "论文",
+      "Tutorials": "教程",
+      "Work Shapes": "工作范式",
+      "Architecture": "架构"
     },
     "format": {
-      "Write-up": "Write-up",
-      "Audio": "Audio",
-      "Video": "Video",
-      "App": "App"
+      "Write-up": "文字稿",
+      "Audio": "音频",
+      "Video": "视频",
+      "App": "应用"
     }
   }
 }
