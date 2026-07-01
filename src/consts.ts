@@ -1,2 +1,2 @@
-export const GITHUB = "https://github.com/tyoung515-svg/canopy-seed";
-export const RELEASES = "https://github.com/tyoung515-svg/canopy-seed/releases";
+export const GITHUB = "https://github.com/tyoung515-svg/bob";
+export const RELEASES = "https://github.com/tyoung515-svg/bob/releases";
