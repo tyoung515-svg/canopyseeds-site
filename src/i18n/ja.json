@@ -1,151 +1,151 @@
 {
   "nav": {
     "brandBy": "by Canopy Seed",
-    "how": "How it works",
-    "why": "Why",
-    "knowledge": "Knowledge",
+    "how": "仕組み",
+    "why": "理由",
+    "knowledge": "ナレッジ",
     "github": "GitHub",
-    "getBob": "Get BoB"
+    "getBob": "BoB を入手"
   },
   "footer": {
-    "by": "a Canopy Seed project",
+    "by": "Canopy Seed のプロジェクト",
     "github": "GitHub",
-    "download": "Download",
-    "how": "How it works",
-    "story": "The story",
-    "knowledge": "Knowledge",
-    "fine": "Built solo, with a lot of help from some very cheap models.",
+    "download": "ダウンロード",
+    "how": "仕組み",
+    "story": "ストーリー",
+    "knowledge": "ナレッジ",
+    "fine": "とても安価なモデルの力を大いに借りつつ、一人で作りました。",
     "copyright": "© 2026 Canopy Seed"
   },
   "meta": {
     "home": {
-      "title": "BoB · Own your AI. BoB does the rest.",
-      "description": "BoB turns a plain-English idea into finished, checked work: code, research, documents, and more. Local-first, no subscription, no lock-in. A Canopy Seed project.",
-      "ogDescription": "An AI teammate that turns ideas into finished work on models you own, for pennies, and can't be export-banned."
+      "title": "BoB · AI を自分のものに。あとは BoB がやる。",
+      "description": "BoB は平易な言葉のアイデアを、完成しチェック済みの成果物に変えます。コード、リサーチ、ドキュメントなど。ローカルファースト、サブスクなし、ロックインなし。Canopy Seed のプロジェクト。",
+      "ogDescription": "アイデアを完成した成果物に変える AI の相棒。自分が所有するモデル上で、わずかな費用で動き、輸出禁止で取り上げられることもありません。"
     },
     "knowledge": {
-      "title": "Knowledge · BoB",
-      "description": "Papers, tutorials, work shapes, and architecture for BoB and the Canopy Seed philosophy."
+      "title": "ナレッジ · BoB",
+      "description": "BoB と Canopy Seed の思想に関する論文、チュートリアル、ワークシェイプ、アーキテクチャ。"
     },
     "entrySuffix": " · BoB"
   },
   "home": {
     "hero": {
-      "eyebrow": "A Canopy Seed project",
-      "titleLine1": "Own your AI.",
-      "titleLine2": "BoB does the rest.",
-      "lede": "BoB turns a plain-English idea into finished, checked work: code, a research report, a business tool, a first draft. Local-first, no subscription, no lock-in. The intelligence is rented from whoever's cheapest this week. The thing you <em>own</em> is BoB.",
-      "ctaPrimary": "Get BoB, free",
-      "ctaSecondary": "How it works",
-      "trust": "Runs on your machine, with your keys · open source · pennies a build",
-      "artAlt": "BoB, a Highlander hoisting a mechanical keyboard overhead"
+      "eyebrow": "Canopy Seed のプロジェクト",
+      "titleLine1": "AI を自分のものに。",
+      "titleLine2": "あとは BoB がやる。",
+      "lede": "BoB は平易な言葉のアイデアを、完成しチェック済みの成果物に変えます。コード、リサーチレポート、業務ツール、初稿など。ローカルファースト、サブスクなし、ロックインなし。知能はその週に最も安いところから借りるもの。あなたが<em>所有する</em>のは BoB です。",
+      "ctaPrimary": "BoB を無料で入手",
+      "ctaSecondary": "仕組み",
+      "trust": "自分のマシンで、自分のキーで動作 · オープンソース · 1 ビルド数円",
+      "artAlt": "メカニカルキーボードを頭上に掲げるハイランダー、BoB"
     },
     "backronym": {
-      "eyebrow": "What the name means",
-      "heading": "BoB isn't just a name.",
-      "buildBody": "Turns your plain-English idea into finished work: code, a research report, a document, a tool that runs.",
-      "orchestrateBody": "Runs a fleet of models that plan, cross-check, and fix each other's work, so no single one is load-bearing.",
-      "bindBody": "Ties every result to proof, a source or a passing test, and into your own memory, so it holds up and compounds."
+      "eyebrow": "この名前の意味",
+      "heading": "BoB は単なる名前ではありません。",
+      "buildBody": "平易な言葉のアイデアを完成した成果物に変えます。コード、リサーチレポート、ドキュメント、動くツールなど。",
+      "orchestrateBody": "計画し、相互にチェックし、互いの仕事を修正するモデルの集団を動かすので、どれか一つに全体が依存することはありません。",
+      "bindBody": "あらゆる結果を証拠、つまり出典や通過したテストに結び付け、さらにあなた自身の記憶に結び付けるので、成果は堅牢になり積み上がります。"
     },
     "moment": {
-      "heading": "The week everyone learned you don't own what you rent.",
-      "body": "On June 12, 2026, the world's most capable AI model was switched off by a single government order. For everyone, in an afternoon, paying customers included. If your work lived on that model, your work stopped.",
-      "strong": "BoB's didn't. Because BoB never depended on any one model in the first place.",
-      "pull": "Rent the intelligence. Own the worker."
+      "heading": "借りているものは自分のものではないと、誰もが学んだ週。",
+      "body": "2026 年 6 月 12 日、世界で最も高性能な AI モデルが、たった一つの政府命令で停止されました。有料顧客も含め、すべての人に対して、ひと晩のうちに。あなたの仕事がそのモデルの上に乗っていたなら、あなたの仕事は止まりました。",
+      "strong": "BoB の仕事は止まりませんでした。BoB はそもそも、どの単一モデルにも依存していなかったからです。",
+      "pull": "知能は借りる。ワーカーは所有する。"
     },
     "why": {
-      "heading": "Not one more place to call an API.",
-      "intro": "Plenty of tools route your prompt to a dozen models. That's table stakes, and it doesn't save you when the model you rely on disappears, or quietly hands you a wrong answer. BoB adds the part that actually matters.",
-      "card1Title": "Checks its own work",
-      "card1Body": "Every meaningful step is verified by a <em>different</em> family of model before it's trusted. Cheap models, kept honest, so you can actually rely on what comes out.",
-      "card2Title": "Finishes the job",
-      "card2Body": "Not a single answer. A small fleet that plans, builds, tests, fixes what's broken, and hands you something that runs. BoB is a teammate, not a chatbox.",
-      "card3Title": "Can't be taken away",
-      "card3Body": "No single vendor is load-bearing. Ban one, swap it. Run it on your own machine if you want. There's nothing here to deprecate, reprice, or export-ban out from under you."
+      "heading": "API を呼び出す場所がもう一つ増えるだけ、ではありません。",
+      "intro": "プロンプトを十数個のモデルに振り分けるツールはたくさんあります。それは当たり前のことで、頼りにしていたモデルが消えたときや、こっそり間違った答えを返してきたときには救いになりません。BoB は、本当に重要な部分を付け加えます。",
+      "card1Title": "自分の仕事を自分でチェック",
+      "card1Body": "意味のある各ステップは、信頼される前に<em>別の</em>系統のモデルによって検証されます。安価なモデルを、正直に保つ。だから出力を本当に頼りにできます。",
+      "card2Title": "仕事を最後までやり切る",
+      "card2Body": "単一の答えではありません。計画し、構築し、テストし、壊れたところを直し、動くものを手渡す小さな集団です。BoB はチャットボックスではなく、相棒です。",
+      "card3Title": "取り上げられない",
+      "card3Body": "単一のベンダーが全体を支えることはありません。一つが禁止されれば、差し替える。望むなら自分のマシンで動かす。ここには、あなたの足元から廃止されたり、値上げされたり、輸出禁止にされたりするものは何もありません。"
     },
     "who": {
-      "heading": "Not just for coders.",
-      "intro": "BoB is a general-purpose worker. Software is what it's been proven on hardest, but the same harness researches, writes, and builds whatever you need.",
-      "devTitle": "Developers",
-      "devBody": "Apps, scripts, fixes, tests. Plain English to running code, checked before it ships.",
-      "kwTitle": "Knowledge workers",
-      "kwBody": "Research, summaries, analysis, reports, grounded in sources BoB actually re-reads, so the facts hold up.",
-      "bizTitle": "Small business",
-      "bizBody": "The tools and docs you'd normally hire out: a quote calculator, an inventory tracker, a policy doc, an outreach plan. Owned, not rented per seat.",
-      "writerTitle": "Writers & creatives",
-      "writerBody": "Drafts, outlines, world-building, edits. A council of voices to push the work past the first idea, on your terms.",
-      "note": "Whatever you use it for, BoB adapts. Through LKS it learns your patterns, your preferences, and your project over time, so it gets better at your work the longer you use it."
+      "heading": "コーダーだけのものではありません。",
+      "intro": "BoB は汎用のワーカーです。ソフトウェアは最も厳しく実証されてきた領域ですが、同じハーネスがあなたの必要とするものを何でもリサーチし、書き、構築します。",
+      "devTitle": "開発者",
+      "devBody": "アプリ、スクリプト、修正、テスト。平易な言葉から動くコードへ。出荷前にチェック済み。",
+      "kwTitle": "ナレッジワーカー",
+      "kwBody": "リサーチ、要約、分析、レポート。BoB が実際に読み直す出典に基づくので、事実が揺らぎません。",
+      "bizTitle": "スモールビジネス",
+      "bizBody": "通常なら外注するツールやドキュメント。見積り計算機、在庫トラッカー、規程文書、アウトリーチ計画。席ごとに借りるのではなく、所有する。",
+      "writerTitle": "ライター & クリエイター",
+      "writerBody": "下書き、アウトライン、世界観づくり、編集。最初の思いつきの先へ仕事を押し進める声の評議会を、あなたの条件で。",
+      "note": "何に使うにせよ、BoB は適応します。LKS を通じて、あなたのパターン、好み、プロジェクトを時間をかけて学ぶので、使うほどあなたの仕事が得意になります。"
     },
     "how": {
-      "heading": "How BoB works",
-      "intro": "Four steps, plain English in, working software out.",
-      "step1Title": "Plant your idea",
-      "step1Body": "Tell BoB what you want built, in your own words. No spec, no jargon.",
-      "step2Title": "BoB asks the right questions",
-      "step2Body": "A quick back-and-forth to fill the gaps, so it builds what you meant, not what it guessed.",
-      "step3Title": "BoB does the homework",
-      "step3Body": "It researches what it doesn't know, with sources, instead of making things up.",
-      "step4Title": "The fleet builds it",
-      "step4Body": "BoB's team of models produces the work, checks it, fixes what's off, and hands you something that holds up: code that runs, a doc that's right, a plan you can act on."
+      "heading": "BoB の仕組み",
+      "intro": "4 つのステップ。平易な言葉で入れて、動くソフトウェアが出てくる。",
+      "step1Title": "アイデアを植える",
+      "step1Body": "何を作ってほしいか、自分の言葉で BoB に伝えます。仕様書も専門用語も不要。",
+      "step2Title": "BoB が的確な質問をする",
+      "step2Body": "手短なやり取りで隙間を埋めるので、推測ではなく、あなたが意図したものを作ります。",
+      "step3Title": "BoB が下調べをする",
+      "step3Body": "知らないことは、でっち上げるのではなく、出典付きでリサーチします。",
+      "step4Title": "集団がそれを構築する",
+      "step4Body": "BoB のモデルチームが成果物を作り、チェックし、おかしなところを直し、堅牢なものを手渡します。動くコード、正しいドキュメント、行動に移せる計画。"
     },
     "council": {
-      "heading": "A brain and a memory behind every build.",
-      "intro": "What turns BoB from a code generator into something you'd trust with a real project: it <em>deliberates</em> before it builds, and it <em>remembers</em> what it learns.",
-      "councilTitle": "A council, not a coin-flip",
-      "councilBody": "Your idea doesn't ride on one model's first guess. <strong>CoCouncil Max</strong> convenes a panel of AI voices that debate the design, fusing the strongest ideas, arguing the risky ones down, grounding each decision before a line of code is written. You get the plan that <em>survived scrutiny</em>, not the first one that sounded good.",
-      "memoryTitle": "A memory, not a blank slate",
-      "memoryBody": "BoB builds on a living local knowledge base called <strong>LKS</strong>. It learns your project, your decisions, and the way you like things done, then adapts. The more you work with BoB, the better it fits how you work, instead of starting from zero every session. Your context stays yours, on your machine."
+      "heading": "あらゆるビルドの背後に、頭脳と記憶。",
+      "intro": "BoB を単なるコード生成器から、実際のプロジェクトを任せられるものへと変えるもの。それは、構築する前に<em>熟議し</em>、学んだことを<em>記憶する</em>ことです。",
+      "councilTitle": "コイン投げではなく、評議会",
+      "councilBody": "あなたのアイデアは、一つのモデルの最初の当て推量に委ねられません。<strong>CoCouncil Max</strong> は AI の声のパネルを招集し、設計を議論させ、最も強い案を融合し、危うい案を論破し、コードを一行書く前にそれぞれの決定を裏付けます。あなたが得るのは、良さそうに聞こえた最初の案ではなく、<em>吟味を生き延びた</em>計画です。",
+      "memoryTitle": "白紙ではなく、記憶",
+      "memoryBody": "BoB は <strong>LKS</strong> と呼ばれる、生きたローカルナレッジベースの上に構築されます。あなたのプロジェクト、あなたの決定、あなたの好むやり方を学び、適応します。BoB と仕事をするほど、毎回ゼロから始めるのではなく、あなたの働き方によりよく合うようになります。あなたのコンテキストは、あなたのマシンの中で、あなたのものであり続けます。"
     },
     "interop": {
-      "heading": "Use BoB your way.",
-      "intro": "BoB is a layer, not a walled garden. It doesn't make you learn a new system. It's built to be driven by the tools you already use, or embedded inside the ones you build.",
-      "driveTitle": "Drive it from your agent",
-      "driveBody": "Claude Code native and want to stay there? Neckbeard mode lets your CC agent run BoB headlessly. Prefer OpenClaw, Hermes, or your own agent? Point it at BoB. It speaks MCP and takes scoped tokens, so it fits the setup you already have.",
-      "buildInTitle": "Or build it in",
-      "buildInBody": "Shipping your own agent platform? Use BoB as an orchestration and verification layer inside it. We don't just allow that, we actively encourage other platforms to integrate BoB as a layer in their systems."
+      "heading": "自分のやり方で BoB を使う。",
+      "intro": "BoB は壁で囲われた庭ではなく、一つのレイヤーです。新しいシステムを覚えさせることはしません。すでに使っているツールから動かすか、自分が作るツールの中に組み込むよう設計されています。",
+      "driveTitle": "自分のエージェントから動かす",
+      "driveBody": "Claude Code をそのまま使い続けたい？ Neckbeard mode を使えば、あなたの CC エージェントが BoB をヘッドレスで動かせます。OpenClaw、Hermes、または自作のエージェントがいい？ それを BoB に向ければいい。MCP を話し、スコープ付きトークンを受け取るので、既存の構成にそのまま収まります。",
+      "buildInTitle": "あるいは組み込む",
+      "buildInBody": "自分のエージェントプラットフォームを出荷している？ BoB をその中のオーケストレーションと検証のレイヤーとして使ってください。私たちはそれを許可するだけでなく、他のプラットフォームが BoB を自分のシステムのレイヤーとして統合することを積極的に推奨します。"
     },
     "proof": {
-      "heading": "BoB built BoB.",
-      "body": "The best proof I have that this works: BoB largely built <em>itself</em>. Across four unattended runs, about thirty hours of autonomous work in total, it wrote 789 tests with zero regressions, on commodity models, for single-digit dollars each. Its own verification caught the mistakes I planted to try to trip it up. Software is the hardest thing I've thrown at it; the same harness handles the research, the writing, and the day-to-day you'd actually use it for.",
-      "stat1Label": "tests written, zero regressions",
-      "stat2Label": "unattended runs, all merged",
-      "stat3Label": "people watching it work",
-      "builder": "And it's <strong>one person</strong>. I'm Travis. I designed the harness; a fleet of cheap models did the actual typing and checked each other's work so I didn't have to. That's the whole idea. You don't need a frontier lab or a team of ten. You need a good harness and models you own.",
-      "kicker": "BoB is that harness, packaged so it can join <em>your</em> team."
+      "heading": "BoB が BoB を作った。",
+      "body": "これが機能するという最良の証拠。BoB はその大部分を<em>自分自身</em>で作りました。4 回の無人実行、合計およそ 30 時間の自律作業を通じて、コモディティモデル上で、それぞれ 1 桁ドルの費用で、リグレッションゼロのまま 789 のテストを書きました。BoB 自身の検証は、引っかけようと私が仕込んだミスを捕まえました。ソフトウェアは私が投げつけた中で最も難しいもの。同じハーネスが、リサーチも、執筆も、あなたが実際に使う日々の作業もこなします。",
+      "stat1Label": "書かれたテスト、リグレッションゼロ",
+      "stat2Label": "無人実行、すべてマージ済み",
+      "stat3Label": "作業を見守った人数",
+      "builder": "しかも<strong>一人</strong>です。私は Travis。ハーネスを設計したのは私。実際のタイピングと相互チェックは安価なモデルの集団がやってくれたので、私がやる必要はありませんでした。それが全体の狙いです。フロンティアの研究所も、10 人のチームも要りません。必要なのは、良いハーネスと、自分が所有するモデルです。",
+      "kicker": "BoB はそのハーネスであり、<em>あなたの</em>チームに加われるようにパッケージされています。"
     },
     "philosophy": {
-      "eyebrow": "The Canopy Seed idea",
-      "heading": "Plant it. Grow it. Own it.",
-      "body": "A seed, in the right conditions, grows into something far bigger than the seed. Software should work the same way: plant an idea, let it grow, and own the thing that grows. Not rented. Not revocable. Yours, like a tree you planted that no one can come and uproot.",
-      "strong": "BoB is the first of the canopy. The rest of the ecosystem grows from the same root: your AI, on your terms."
+      "eyebrow": "Canopy Seed の考え方",
+      "heading": "植える。育てる。所有する。",
+      "body": "種は、適した環境では、種よりもはるかに大きなものへと育ちます。ソフトウェアも同じように働くべきです。アイデアを植え、育てさせ、育ったものを所有する。借りるのでも、取り消せるのでもない。自分が植えた木のように、誰も来て引き抜けない、あなたのもの。",
+      "strong": "BoB は林冠の最初の一本です。エコシステムの残りも同じ根から育ちます。あなたの AI を、あなたの条件で。"
     },
     "cta": {
-      "artAlt": "BoB crest",
-      "heading": "Add BoB to your team.",
-      "body": "Open source. Local-first. Your keys, your machine. No subscription.",
-      "primary": "Download BoB, free",
-      "secondary": "View on GitHub"
+      "artAlt": "BoB の紋章",
+      "heading": "BoB をあなたのチームに加える。",
+      "body": "オープンソース。ローカルファースト。あなたのキー、あなたのマシン。サブスクなし。",
+      "primary": "BoB を無料でダウンロード",
+      "secondary": "GitHub で見る"
     }
   },
   "knowledge": {
-    "eyebrow": "Knowledge",
-    "title": "Learn BoB, and the thinking behind it.",
-    "intro": "Papers, tutorials, work shapes, and architecture. In writing, audio, video, and small apps you can poke at.",
-    "filterAll": "All",
-    "read": "Read →",
-    "moreSoon": "More coming soon in this category.",
-    "back": "← Knowledge",
+    "eyebrow": "ナレッジ",
+    "title": "BoB と、その背後にある考え方を学ぶ。",
+    "intro": "論文、チュートリアル、ワークシェイプ、アーキテクチャ。文章、音声、動画、そして触って試せる小さなアプリで。",
+    "filterAll": "すべて",
+    "read": "読む →",
+    "moreSoon": "このカテゴリのコンテンツを近日追加予定。",
+    "back": "← ナレッジ",
     "category": {
-      "Papers": "Papers",
-      "Tutorials": "Tutorials",
-      "Work Shapes": "Work Shapes",
-      "Architecture": "Architecture"
+      "Papers": "論文",
+      "Tutorials": "チュートリアル",
+      "Work Shapes": "ワークシェイプ",
+      "Architecture": "アーキテクチャ"
     },
     "format": {
-      "Write-up": "Write-up",
-      "Audio": "Audio",
-      "Video": "Video",
-      "App": "App"
+      "Write-up": "書き起こし",
+      "Audio": "音声",
+      "Video": "動画",
+      "App": "アプリ"
     }
   }
 }
