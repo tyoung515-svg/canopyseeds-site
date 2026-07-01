@@ -1,150 +1,150 @@
 {
   "nav": {
-    "brandBy": "by Canopy Seed",
-    "how": "How it works",
-    "why": "Why",
-    "knowledge": "Knowledge",
+    "brandBy": "por Canopy Seed",
+    "how": "Cómo funciona",
+    "why": "Por qué",
+    "knowledge": "Conocimiento",
     "github": "GitHub",
-    "getBob": "Get BoB"
+    "getBob": "Obtener BoB"
   },
   "footer": {
-    "by": "a Canopy Seed project",
+    "by": "un proyecto de Canopy Seed",
     "github": "GitHub",
-    "download": "Download",
-    "how": "How it works",
-    "story": "The story",
-    "knowledge": "Knowledge",
-    "fine": "Built solo, with a lot of help from some very cheap models.",
+    "download": "Descargar",
+    "how": "Cómo funciona",
+    "story": "La historia",
+    "knowledge": "Conocimiento",
+    "fine": "Construido en solitario, con mucha ayuda de algunos modelos muy baratos.",
     "copyright": "© 2026 Canopy Seed"
   },
   "meta": {
     "home": {
-      "title": "BoB · Own your AI. BoB does the rest.",
-      "description": "BoB turns a plain-English idea into finished, checked work: code, research, documents, and more. Local-first, no subscription, no lock-in. A Canopy Seed project.",
-      "ogDescription": "An AI teammate that turns ideas into finished work on models you own, for pennies, and can't be export-banned."
+      "title": "BoB · Sé dueño de tu IA. BoB hace el resto.",
+      "description": "BoB convierte una idea en lenguaje corriente en trabajo terminado y comprobado: código, investigación, documentos y más. Local primero, sin suscripción, sin dependencia cautiva. Un proyecto de Canopy Seed.",
+      "ogDescription": "Un compañero de IA que convierte ideas en trabajo terminado sobre modelos que posees, por unos céntimos, y que no puede quedar vetado por prohibiciones de exportación."
     },
     "knowledge": {
-      "title": "Knowledge · BoB",
-      "description": "Papers, tutorials, work shapes, and architecture for BoB and the Canopy Seed philosophy."
+      "title": "Conocimiento · BoB",
+      "description": "Artículos, tutoriales, formas de trabajo y arquitectura de BoB y de la filosofía de Canopy Seed."
     },
     "entrySuffix": " · BoB"
   },
   "home": {
     "hero": {
-      "eyebrow": "A Canopy Seed project",
-      "titleLine1": "Own your AI.",
-      "titleLine2": "BoB does the rest.",
-      "lede": "BoB turns a plain-English idea into finished, checked work: code, a research report, a business tool, a first draft. Local-first, no subscription, no lock-in. The intelligence is rented from whoever's cheapest this week. The thing you <em>own</em> is BoB.",
-      "ctaPrimary": "Get BoB, free",
-      "ctaSecondary": "How it works",
-      "trust": "Runs on your machine, with your keys · open source · pennies a build",
-      "artAlt": "BoB, a Highlander hoisting a mechanical keyboard overhead"
+      "eyebrow": "Un proyecto de Canopy Seed",
+      "titleLine1": "Sé dueño de tu IA.",
+      "titleLine2": "BoB hace el resto.",
+      "lede": "BoB convierte una idea en lenguaje corriente en trabajo terminado y comprobado: código, un informe de investigación, una herramienta de negocio, un primer borrador. Local primero, sin suscripción, sin dependencia cautiva. La inteligencia se alquila a quien sea más barato esta semana. Lo que <em>posees</em> es BoB.",
+      "ctaPrimary": "Obtén BoB, gratis",
+      "ctaSecondary": "Cómo funciona",
+      "trust": "Corre en tu máquina, con tus claves · código abierto · unos céntimos por construcción",
+      "artAlt": "BoB, un montañés escocés levantando un teclado mecánico por encima de la cabeza"
     },
     "backronym": {
-      "eyebrow": "What the name means",
-      "heading": "BoB isn't just a name.",
-      "buildBody": "Turns your plain-English idea into finished work: code, a research report, a document, a tool that runs.",
-      "orchestrateBody": "Runs a fleet of models that plan, cross-check, and fix each other's work, so no single one is load-bearing.",
-      "bindBody": "Ties every result to proof, a source or a passing test, and into your own memory, so it holds up and compounds."
+      "eyebrow": "Qué significa el nombre",
+      "heading": "BoB no es solo un nombre.",
+      "buildBody": "Convierte tu idea en lenguaje corriente en trabajo terminado: código, un informe de investigación, un documento, una herramienta que funciona.",
+      "orchestrateBody": "Ejecuta una flota de modelos que planifican, se contrastan entre sí y corrigen el trabajo de los demás, de modo que ninguno sea imprescindible.",
+      "bindBody": "Ata cada resultado a una prueba, una fuente o un test que pasa, y a tu propia memoria, para que se sostenga y se acumule."
     },
     "moment": {
-      "heading": "The week everyone learned you don't own what you rent.",
-      "body": "On June 12, 2026, the world's most capable AI model was switched off by a single government order. For everyone, in an afternoon, paying customers included. If your work lived on that model, your work stopped.",
-      "strong": "BoB's didn't. Because BoB never depended on any one model in the first place.",
-      "pull": "Rent the intelligence. Own the worker."
+      "heading": "La semana en que todos aprendieron que no eres dueño de lo que alquilas.",
+      "body": "El 12 de junio de 2026, el modelo de IA más capaz del mundo se apagó por una sola orden de un gobierno. Para todos, en una tarde, clientes de pago incluidos. Si tu trabajo vivía en ese modelo, tu trabajo se detuvo.",
+      "strong": "El de BoB no. Porque BoB nunca dependió de ningún modelo en primer lugar.",
+      "pull": "Alquila la inteligencia. Sé dueño del trabajador."
     },
     "why": {
-      "heading": "Not one more place to call an API.",
-      "intro": "Plenty of tools route your prompt to a dozen models. That's table stakes, and it doesn't save you when the model you rely on disappears, or quietly hands you a wrong answer. BoB adds the part that actually matters.",
-      "card1Title": "Checks its own work",
-      "card1Body": "Every meaningful step is verified by a <em>different</em> family of model before it's trusted. Cheap models, kept honest, so you can actually rely on what comes out.",
-      "card2Title": "Finishes the job",
-      "card2Body": "Not a single answer. A small fleet that plans, builds, tests, fixes what's broken, and hands you something that runs. BoB is a teammate, not a chatbox.",
-      "card3Title": "Can't be taken away",
-      "card3Body": "No single vendor is load-bearing. Ban one, swap it. Run it on your own machine if you want. There's nothing here to deprecate, reprice, or export-ban out from under you."
+      "heading": "No un lugar más desde el que llamar a una API.",
+      "intro": "Muchas herramientas enrutan tu prompt a una docena de modelos. Eso es lo mínimo, y no te salva cuando el modelo del que dependes desaparece, o te entrega en silencio una respuesta equivocada. BoB añade la parte que de verdad importa.",
+      "card1Title": "Comprueba su propio trabajo",
+      "card1Body": "Cada paso significativo lo verifica una familia de modelo <em>distinta</em> antes de confiar en él. Modelos baratos, mantenidos honestos, para que puedas de verdad fiarte de lo que sale.",
+      "card2Title": "Termina el trabajo",
+      "card2Body": "No una sola respuesta. Una pequeña flota que planifica, construye, prueba, arregla lo que está roto y te entrega algo que funciona. BoB es un compañero de equipo, no un chat.",
+      "card3Title": "No te lo pueden quitar",
+      "card3Body": "Ningún proveedor único es imprescindible. Prohíbe uno, cámbialo. Córrelo en tu propia máquina si quieres. Aquí no hay nada que puedan descontinuar, volver a tarificar o vetar por exportación a tus espaldas."
     },
     "who": {
-      "heading": "Not just for coders.",
-      "intro": "BoB is a general-purpose worker. Software is what it's been proven on hardest, but the same harness researches, writes, and builds whatever you need.",
-      "devTitle": "Developers",
-      "devBody": "Apps, scripts, fixes, tests. Plain English to running code, checked before it ships.",
-      "kwTitle": "Knowledge workers",
-      "kwBody": "Research, summaries, analysis, reports, grounded in sources BoB actually re-reads, so the facts hold up.",
-      "bizTitle": "Small business",
-      "bizBody": "The tools and docs you'd normally hire out: a quote calculator, an inventory tracker, a policy doc, an outreach plan. Owned, not rented per seat.",
-      "writerTitle": "Writers & creatives",
-      "writerBody": "Drafts, outlines, world-building, edits. A council of voices to push the work past the first idea, on your terms.",
-      "note": "Whatever you use it for, BoB adapts. Through LKS it learns your patterns, your preferences, and your project over time, so it gets better at your work the longer you use it."
+      "heading": "No solo para programadores.",
+      "intro": "BoB es un trabajador de propósito general. El software es donde más a fondo se ha probado, pero el mismo arnés investiga, escribe y construye lo que necesites.",
+      "devTitle": "Desarrolladores",
+      "devBody": "Aplicaciones, scripts, correcciones, tests. Del lenguaje corriente a código que funciona, comprobado antes de entregarse.",
+      "kwTitle": "Trabajadores del conocimiento",
+      "kwBody": "Investigación, resúmenes, análisis, informes, anclados en fuentes que BoB realmente vuelve a leer, para que los hechos se sostengan.",
+      "bizTitle": "Pequeña empresa",
+      "bizBody": "Las herramientas y documentos que normalmente contratarías fuera: una calculadora de presupuestos, un control de inventario, un documento de políticas, un plan de contacto. En propiedad, no alquilado por asiento.",
+      "writerTitle": "Escritores y creativos",
+      "writerBody": "Borradores, esquemas, construcción de mundos, ediciones. Un consejo de voces para empujar el trabajo más allá de la primera idea, en tus términos.",
+      "note": "Para lo que sea que lo uses, BoB se adapta. A través de LKS aprende tus patrones, tus preferencias y tu proyecto con el tiempo, así que mejora en tu trabajo cuanto más lo usas."
     },
     "how": {
-      "heading": "How BoB works",
-      "intro": "Four steps, plain English in, working software out.",
-      "step1Title": "Plant your idea",
-      "step1Body": "Tell BoB what you want built, in your own words. No spec, no jargon.",
-      "step2Title": "BoB asks the right questions",
-      "step2Body": "A quick back-and-forth to fill the gaps, so it builds what you meant, not what it guessed.",
-      "step3Title": "BoB does the homework",
-      "step3Body": "It researches what it doesn't know, with sources, instead of making things up.",
-      "step4Title": "The fleet builds it",
-      "step4Body": "BoB's team of models produces the work, checks it, fixes what's off, and hands you something that holds up: code that runs, a doc that's right, a plan you can act on."
+      "heading": "Cómo funciona BoB",
+      "intro": "Cuatro pasos, lenguaje corriente que entra, software que funciona que sale.",
+      "step1Title": "Planta tu idea",
+      "step1Body": "Dile a BoB qué quieres construir, con tus propias palabras. Sin especificación, sin jerga.",
+      "step2Title": "BoB hace las preguntas adecuadas",
+      "step2Body": "Un breve ida y vuelta para llenar los vacíos, de modo que construya lo que querías decir, no lo que adivinó.",
+      "step3Title": "BoB hace la tarea",
+      "step3Body": "Investiga lo que no sabe, con fuentes, en lugar de inventar cosas.",
+      "step4Title": "La flota lo construye",
+      "step4Body": "El equipo de modelos de BoB produce el trabajo, lo comprueba, arregla lo que está mal y te entrega algo que se sostiene: código que funciona, un documento correcto, un plan sobre el que puedes actuar."
     },
     "council": {
-      "heading": "A brain and a memory behind every build.",
-      "intro": "What turns BoB from a code generator into something you'd trust with a real project: it <em>deliberates</em> before it builds, and it <em>remembers</em> what it learns.",
-      "councilTitle": "A council, not a coin-flip",
-      "councilBody": "Your idea doesn't ride on one model's first guess. <strong>CoCouncil Max</strong> convenes a panel of AI voices that debate the design, fusing the strongest ideas, arguing the risky ones down, grounding each decision before a line of code is written. You get the plan that <em>survived scrutiny</em>, not the first one that sounded good.",
-      "memoryTitle": "A memory, not a blank slate",
-      "memoryBody": "BoB builds on a living local knowledge base called <strong>LKS</strong>. It learns your project, your decisions, and the way you like things done, then adapts. The more you work with BoB, the better it fits how you work, instead of starting from zero every session. Your context stays yours, on your machine."
+      "heading": "Un cerebro y una memoria detrás de cada construcción.",
+      "intro": "Lo que convierte a BoB de un generador de código en algo a lo que confiarías un proyecto real: <em>delibera</em> antes de construir, y <em>recuerda</em> lo que aprende.",
+      "councilTitle": "Un consejo, no un cara o cruz",
+      "councilBody": "Tu idea no depende de la primera suposición de un solo modelo. <strong>CoCouncil Max</strong> convoca un panel de voces de IA que debaten el diseño, fusionando las ideas más fuertes, rebatiendo las arriesgadas, anclando cada decisión antes de escribir una línea de código. Obtienes el plan que <em>sobrevivió al escrutinio</em>, no el primero que sonó bien.",
+      "memoryTitle": "Una memoria, no una hoja en blanco",
+      "memoryBody": "BoB construye sobre una base de conocimiento local viva llamada <strong>LKS</strong>. Aprende tu proyecto, tus decisiones y la manera en que te gusta que se hagan las cosas, y luego se adapta. Cuanto más trabajas con BoB, mejor encaja con tu forma de trabajar, en lugar de empezar desde cero en cada sesión. Tu contexto sigue siendo tuyo, en tu máquina."
     },
     "interop": {
-      "heading": "Use BoB your way.",
-      "intro": "BoB is a layer, not a walled garden. It doesn't make you learn a new system. It's built to be driven by the tools you already use, or embedded inside the ones you build.",
-      "driveTitle": "Drive it from your agent",
-      "driveBody": "Claude Code native and want to stay there? Neckbeard mode lets your CC agent run BoB headlessly. Prefer OpenClaw, Hermes, or your own agent? Point it at BoB. It speaks MCP and takes scoped tokens, so it fits the setup you already have.",
-      "buildInTitle": "Or build it in",
-      "buildInBody": "Shipping your own agent platform? Use BoB as an orchestration and verification layer inside it. We don't just allow that, we actively encourage other platforms to integrate BoB as a layer in their systems."
+      "heading": "Usa BoB a tu manera.",
+      "intro": "BoB es una capa, no un jardín amurallado. No te obliga a aprender un sistema nuevo. Está hecho para conducirse con las herramientas que ya usas, o para incrustarse dentro de las que construyes.",
+      "driveTitle": "Condúcelo desde tu agente",
+      "driveBody": "¿Trabajas de forma nativa en Claude Code y quieres quedarte ahí? El modo Neckbeard permite que tu agente de CC ejecute BoB sin interfaz. ¿Prefieres OpenClaw, Hermes o tu propio agente? Apúntalo a BoB. Habla MCP y acepta tokens con alcance limitado, así que encaja en la configuración que ya tienes.",
+      "buildInTitle": "O intégralo",
+      "buildInBody": "¿Lanzas tu propia plataforma de agentes? Usa BoB como capa de orquestación y verificación dentro de ella. No solo lo permitimos, sino que animamos activamente a otras plataformas a integrar BoB como una capa en sus sistemas."
     },
     "proof": {
-      "heading": "BoB built BoB.",
-      "body": "The best proof I have that this works: BoB largely built <em>itself</em>. Across four unattended runs, about thirty hours of autonomous work in total, it wrote 789 tests with zero regressions, on commodity models, for single-digit dollars each. Its own verification caught the mistakes I planted to try to trip it up. Software is the hardest thing I've thrown at it; the same harness handles the research, the writing, and the day-to-day you'd actually use it for.",
-      "stat1Label": "tests written, zero regressions",
-      "stat2Label": "unattended runs, all merged",
-      "stat3Label": "people watching it work",
-      "builder": "And it's <strong>one person</strong>. I'm Travis. I designed the harness; a fleet of cheap models did the actual typing and checked each other's work so I didn't have to. That's the whole idea. You don't need a frontier lab or a team of ten. You need a good harness and models you own.",
-      "kicker": "BoB is that harness, packaged so it can join <em>your</em> team."
+      "heading": "BoB construyó BoB.",
+      "body": "La mejor prueba que tengo de que esto funciona: BoB en gran medida se construyó <em>a sí mismo</em>. A lo largo de cuatro ejecuciones sin supervisión, unas treinta horas de trabajo autónomo en total, escribió 789 tests sin regresiones, sobre modelos de consumo, por unos pocos dólares cada una. Su propia verificación atrapó los errores que planté para intentar hacerlo tropezar. El software es lo más difícil que le he lanzado; el mismo arnés maneja la investigación, la escritura y el día a día para el que realmente lo usarías.",
+      "stat1Label": "tests escritos, cero regresiones",
+      "stat2Label": "ejecuciones sin supervisión, todas fusionadas",
+      "stat3Label": "personas viéndolo trabajar",
+      "builder": "Y es <strong>una sola persona</strong>. Soy Travis. Yo diseñé el arnés; una flota de modelos baratos hizo el tecleo real y comprobó el trabajo de los demás para que yo no tuviera que hacerlo. Esa es toda la idea. No necesitas un laboratorio de frontera ni un equipo de diez. Necesitas un buen arnés y modelos que poseas.",
+      "kicker": "BoB es ese arnés, empaquetado para que pueda unirse a <em>tu</em> equipo."
     },
     "philosophy": {
-      "eyebrow": "The Canopy Seed idea",
-      "heading": "Plant it. Grow it. Own it.",
-      "body": "A seed, in the right conditions, grows into something far bigger than the seed. Software should work the same way: plant an idea, let it grow, and own the thing that grows. Not rented. Not revocable. Yours, like a tree you planted that no one can come and uproot.",
-      "strong": "BoB is the first of the canopy. The rest of the ecosystem grows from the same root: your AI, on your terms."
+      "eyebrow": "La idea de Canopy Seed",
+      "heading": "Plántalo. Cultívalo. Poséelo.",
+      "body": "Una semilla, en las condiciones adecuadas, crece hasta convertirse en algo mucho más grande que la semilla. El software debería funcionar igual: planta una idea, déjala crecer y sé dueño de lo que crece. No alquilado. No revocable. Tuyo, como un árbol que plantaste y que nadie puede venir a arrancar.",
+      "strong": "BoB es el primero de la copa. El resto del ecosistema crece desde la misma raíz: tu IA, en tus términos."
     },
     "cta": {
-      "artAlt": "BoB crest",
-      "heading": "Add BoB to your team.",
-      "body": "Open source. Local-first. Your keys, your machine. No subscription.",
-      "primary": "Download BoB, free",
-      "secondary": "View on GitHub"
+      "artAlt": "Escudo de BoB",
+      "heading": "Suma BoB a tu equipo.",
+      "body": "Código abierto. Local primero. Tus claves, tu máquina. Sin suscripción.",
+      "primary": "Descarga BoB, gratis",
+      "secondary": "Ver en GitHub"
     }
   },
   "knowledge": {
-    "eyebrow": "Knowledge",
-    "title": "Learn BoB, and the thinking behind it.",
-    "intro": "Papers, tutorials, work shapes, and architecture. In writing, audio, video, and small apps you can poke at.",
-    "filterAll": "All",
-    "read": "Read →",
-    "moreSoon": "More coming soon in this category.",
-    "back": "← Knowledge",
+    "eyebrow": "Conocimiento",
+    "title": "Aprende BoB, y el pensamiento que hay detrás.",
+    "intro": "Artículos, tutoriales, formas de trabajo y arquitectura. En texto, audio, vídeo y pequeñas apps con las que puedes trastear.",
+    "filterAll": "Todo",
+    "read": "Leer →",
+    "moreSoon": "Más próximamente en esta categoría.",
+    "back": "← Conocimiento",
     "category": {
-      "Papers": "Papers",
-      "Tutorials": "Tutorials",
-      "Work Shapes": "Work Shapes",
-      "Architecture": "Architecture"
+      "Papers": "Artículos",
+      "Tutorials": "Tutoriales",
+      "Work Shapes": "Formas de trabajo",
+      "Architecture": "Arquitectura"
     },
     "format": {
-      "Write-up": "Write-up",
+      "Write-up": "Reseña",
       "Audio": "Audio",
-      "Video": "Video",
+      "Video": "Vídeo",
       "App": "App"
     }
   }
