@@ -1,6 +1,6 @@
 ---
 title: "Setting up BoB (v0.96)"
-description: "A first install, start to finish: the three prerequisites, the one-command installer, giving BoB a model backend, and your first login. Windows, headless-first, about fifteen minutes."
+description: "A first install, start to finish: the three prerequisites, the step-by-step setup, giving BoB a model backend, and your first login. Windows, headless-first, about twenty minutes."
 category: "Tutorials"
 format: "Write-up"
 date: 2026-07-01
@@ -10,11 +10,13 @@ draft: true
 
 This is the shortest honest path from nothing to a running BoB on your own machine. **v0.96 is Windows-only and headless-first**: the command-line, MCP, and agent front door works today; the web and desktop GUIs ship as a *preview*. Everything runs on `127.0.0.1` by default, with your keys, on your box. Nobody in the middle.
 
-Budget about fifteen minutes, most of it waiting on downloads.
+Budget about twenty minutes, most of it waiting on downloads.
+
+> **On the installer:** v0.96 is set up with the steps below — that's the supported path today. A single-command installer that does all of this for you is landing in **v1.0**. If you're comfortable in a terminal, the manual walk-through here takes about the same time and shows you exactly what's happening.
 
 ## Before you start: three prerequisites
 
-BoB fails closed without all three. The installer checks for them and stops if any is missing, on purpose.
+BoB fails closed without all three — that's deliberate.
 
 1. **Docker Desktop**, installed and **running**. It hosts BoB's datastores (Postgres, Redis, Qdrant) *and* it is the locked-down sandbox where BoB runs model-written code before trusting it. Verify:
    ```powershell
@@ -27,96 +29,131 @@ BoB fails closed without all three. The installer checks for them and stops if a
    uv --version
    ```
 
-3. **PowerShell 7+** (`pwsh`). Windows ships only 5.1; BoB's service scripts need 7. Install and use it, not the blue 5.1 window:
+3. **PowerShell 7+** (`pwsh`). Windows ships only 5.1; BoB's service scripts need 7. Install it and run everything below from a **PowerShell 7** window, not the blue 5.1 one:
    ```powershell
    winget install --id Microsoft.PowerShell
    ```
 
 > Docker isn't optional. It's the isolation boundary that lets BoB run generated code safely. Don't work around it — that's the whole point of the verification step.
 
-## Install: one command
+## Get the code
 
-Clone the BoB repository and run the installer from inside it, in a **PowerShell 7** window:
+Clone the BoB repository and `cd` into it. Every command from here runs from the repo root:
 
 ```powershell
 git clone https://github.com/tyoung515-svg/bob.git bob
 cd bob
-./install-bob.ps1
 ```
 
-That script does the whole first-run for you, and it's **idempotent** — safe to run again any time. In order, it:
+## 1. Python environment + pinned dependencies
 
-- checks the three prerequisites,
-- builds the Python environment from pinned lockfiles (no surprises, reproducible),
-- brings up the Docker infrastructure and initializes the database,
-- bootstraps your secrets **interactively** — it generates a strong admin password, a 2FA secret, and the internal signing key, and shows the password **once**,
-- waits for the stack to report healthy,
-- smoke-tests your model backend if you've set a key,
-- and prints the URL and login.
+Create the virtual environment and install all three services from their **locked** requirement files (fully pinned — reproducible, no surprises):
 
-**Write the admin password down when it appears.** Only its bcrypt hash is stored on disk; there's no "show it again" later.
+```powershell
+uv venv .venv --python 3.13
+uv pip install --python .venv\Scripts\python.exe -r bobclaw-core\requirements.lock
+uv pip install --python .venv\Scripts\python.exe -r bobclaw-gateway\requirements.lock
+uv pip install --python .venv\Scripts\python.exe -r bobclaw-claude-pipeline\requirements.lock
+```
 
-## Give BoB a brain: enable one backend
+Use the `requirements.lock` files, **not** `requirements.txt`.
 
-BoB is the harness — the intelligence is rented from a model you point it at. It needs **at least one** backend, configured in `.secrets\bobclaw.env`. Pick whichever you already have:
+## 2. Env file + database password (do this *before* Docker)
 
-- **A cloud API key** — paste `ANTHROPIC_API_KEY=sk-ant-...` into the env file. The default model is `claude-sonnet-5`; BoB also speaks to Google, DeepSeek, Z.AI/GLM, Moonshot/Kimi, and MiniMax the same way.
+```powershell
+Copy-Item .secrets\bobclaw.env.example .secrets\bobclaw.env
+```
+
+Open `.secrets\bobclaw.env`, set a strong **`POSTGRES_PASSWORD`**, and update **`POSTGRES_URL`** to match:
+
+```
+POSTGRES_URL=postgresql://bobclaw:<your-password>@localhost:5432/bobclaw
+```
+
+Order matters here: the Postgres volume bakes in whatever password is set on its **first** startup. Setting it now — before step 3 — means the container and the app agree on the first try, with no `docker compose down -v` do-over.
+
+## 3. Bring up the infrastructure
+
+```powershell
+docker compose --env-file .secrets\bobclaw.env up -d postgres redis qdrant
+```
+
+`--env-file` makes Compose use the same `POSTGRES_PASSWORD` the app reads from `.secrets`. The database schema (`init.sql`) runs automatically on that first start. Wait until Postgres is accepting connections:
+
+```powershell
+docker exec bobclaw-postgres pg_isready -U bobclaw
+```
+
+All infrastructure binds to `127.0.0.1` only.
+
+## 4. Auth secrets and a model backend
+
+Generate BoB's secrets:
+
+```powershell
+.venv\Scripts\python.exe scripts\gen_secrets.py
+```
+
+This fills in `BOBCLAW_SECRET` (the internal signing key — one file, read by both core and gateway), `BOBCLAW_PASSWORD_HASH`, and `TOTP_SECRET`. **It prints your admin password once — write it down.** Only its bcrypt hash is stored on disk; there is no "show it again" later.
+
+Then give BoB at least one **model backend** — it's the harness; the intelligence is rented from a model you point it at. Pick whichever you already have and set it in `.secrets\bobclaw.env`:
+
+- **A cloud API key** — paste `ANTHROPIC_API_KEY=sk-ant-...`. The default model is `claude-sonnet-5`; BoB also speaks to Google, DeepSeek, Z.AI/GLM, Moonshot/Kimi, and MiniMax the same way.
 - **A Claude subscription, no API key** — if you have the `claude` CLI, run `claude setup-token`. BoB then drives Claude under your own login (see `COMPLIANCE.md` — your subscription, your terms, never proxied).
 - **Fully local, no cloud** — run Ollama or LM Studio and set `PREFERRED_LOCAL_MODEL`.
 
-> **Model IDs must match what your provider currently serves.** The example values in the env file are placeholders, not live model names — set the real one.
+> **Model IDs must match what your provider currently serves.** The example values in the env file are placeholders, not live model names — set the real one. And note: **BoB reads secrets at startup**, so if you add or change a key later, restart core (below) to pick it up.
 
-One catch worth internalizing now: **BoB reads secrets at startup.** If you add or change a key after it's already running, restart core so it picks the change up:
+## 5. Start it up
 
 ```powershell
-./scripts/win/stop-all.ps1
 ./scripts/win/start-local.ps1
 ```
 
-## First login
-
-Open the preview web UI:
-
-**http://127.0.0.1:7826/ui**
-
-- Log in as **`admin`** with the password the installer printed.
-- Login also needs a **TOTP 2FA code**. Enroll the `TOTP_SECRET` from `.secrets\bobclaw.env` in any authenticator app (Google Authenticator, 1Password, Aegis…) using this URI, then enter the rotating 6-digit code:
-  ```
-  otpauth://totp/BoB:admin?secret=<TOTP_SECRET>&issuer=BoB
-  ```
-
-Prefer to stay in your terminal or drive BoB from another agent? The headless MCP server (`./scripts/win/start-mcp.ps1`) is the intended front door for v0.96 — the web UI is the preview.
-
-## Confirm it's alive
-
-The stack reports its own health:
+`start-local.ps1` brings up infra + core + gateway as plain windows — no local embedding models, no Task Scheduler. Wait for it to report healthy:
 
 ```powershell
 Invoke-RestMethod http://127.0.0.1:7826/health
 ```
 
-Under the hood, three services are running: **core** (the engine, port 7825), **gateway** (auth + API + the web UI, 7826), and the **Claude pipeline** (7823). If the installer smoke-tested your Anthropic key, your model default is already confirmed; local-only setups validate on your first chat message.
+Three services are now running: **core** (the engine, port 7825), **gateway** (auth + API + the web UI, 7826), and the **Claude pipeline** (7823).
+
+> *Optional:* `./scripts/win/install-durability.ps1 -IncludeModels:$false` registers Task-Scheduler tasks so core/gateway auto-start on logon after a reboot. Skip it if you don't want auto-start.
+
+## 6. First login
+
+Open the preview web UI:
+
+**http://127.0.0.1:7826/ui**
+
+- Log in as **`admin`** with the password `gen_secrets` printed in step 4.
+- Login also needs a **TOTP 2FA code**. Enroll the `TOTP_SECRET` from `.secrets\bobclaw.env` in any authenticator app (Google Authenticator, 1Password, Aegis…) using this URI, then enter the rotating 6-digit code:
+  ```
+  otpauth://totp/BoB:admin?secret=<TOTP_SECRET>&issuer=BoB
+  ```
+
+If you set an Anthropic key, your first chat message confirms the model resolves; local-only setups validate on first chat too. Prefer to stay in your terminal or drive BoB from another agent? The headless **MCP server** (`./scripts/win/start-mcp.ps1`) is the intended front door for v0.96 — the web UI is the preview.
 
 ## Stopping and starting again
 
 ```powershell
-# stop the host services (Docker keeps running its own containers)
+# stop the host services (Docker keeps its own containers running)
 ./scripts/win/stop-all.ps1
 
-# bring it back up — light path: infra + core + gateway, no local model servers
+# bring it back up
 ./scripts/win/start-local.ps1
 ```
 
-After a reboot, re-running `./install-bob.ps1` also works — it just no-ops the parts that are already done.
+Adding or changing a backend key is the one thing that needs a restart — `stop-all` then `start-local`, since env is read at startup.
 
 ## Good-to-knows for a first run
 
 - **Memory is off by default.** BoB's long-term memory (LKS) uses optional local model servers; with them unset, recall simply fails open and never blocks the stack. You can turn it on later.
 - **Loopback by default.** Every service binds `127.0.0.1`. Do **not** expose the gateway to a network until you've read `SECURITY.md` — for remote access, an SSH tunnel or the native client beats the preview web UI, which keeps tokens in the browser.
-- **Single-operator, this release.** v0.96 is honest about its scope: headless-usable, GUI-preview, not a hardened multi-tenant service. Containerized packaging and cross-platform support are tracked toward v1.0.
+- **Single-operator, this release.** v0.96 is honest about its scope: headless-usable, GUI-preview, not a hardened multi-tenant service. The one-command installer, containerized packaging, and cross-platform support are tracked toward v1.0.
 
 ## Where to go next
 
 - **[The BoB Architecture Harness](/knowledge/architecture-harness/)** — what you just started, and why the model is the swappable part.
 - **[BoBClaw: the whitepaper](/knowledge/bobclaw-whitepaper/)** — the technical depth under the hood.
-- In the repo: `ARCHITECTURE.md` (when to council vs. single-dispatch, teams, capability classes), `SECURITY.md` (before you expose anything), and `COMPLIANCE.md` (using your own subscriptions within each vendor's terms).
+- In the repo: `AGENTS-SETUP.md` (this flow, agent-runnable), `ARCHITECTURE.md` (when to council vs. single-dispatch, teams, capability classes), `SECURITY.md` (before you expose anything), and `COMPLIANCE.md` (using your own subscriptions within each vendor's terms).
