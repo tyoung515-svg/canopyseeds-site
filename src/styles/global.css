@@ -222,11 +222,11 @@ section { padding: 0 24px; }
 .lang-switcher option { background: var(--bg-2); color: var(--text); }
 
 /* CJK font stacks (families loaded only on those locales; Latin still uses Inter / Space Grotesk) */
-html[lang="zh-Hans"] body { font-family: "Inter", "Noto Sans SC", system-ui, -apple-system, sans-serif; }
+html[lang="zh-hans"] body { font-family: "Inter", "Noto Sans SC", system-ui, -apple-system, sans-serif; }
 html[lang="ja"] body { font-family: "Inter", "Noto Sans JP", system-ui, -apple-system, sans-serif; }
-html[lang="zh-Hans"] h1, html[lang="zh-Hans"] h2, html[lang="zh-Hans"] h3, html[lang="zh-Hans"] .brand-name,
-html[lang="zh-Hans"] .pull, html[lang="zh-Hans"] .btn, html[lang="zh-Hans"] .stat-n, html[lang="zh-Hans"] .step-n,
-html[lang="zh-Hans"] .bob-cap, html[lang="zh-Hans"] .builder-kicker {
+html[lang="zh-hans"] h1, html[lang="zh-hans"] h2, html[lang="zh-hans"] h3, html[lang="zh-hans"] .brand-name,
+html[lang="zh-hans"] .pull, html[lang="zh-hans"] .btn, html[lang="zh-hans"] .stat-n, html[lang="zh-hans"] .step-n,
+html[lang="zh-hans"] .bob-cap, html[lang="zh-hans"] .builder-kicker {
   font-family: "Space Grotesk", "Noto Sans SC", system-ui, sans-serif;
 }
 html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3, html[lang="ja"] .brand-name,
