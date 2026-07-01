@@ -4,6 +4,8 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 const {
+  lang = 'en',
+  path = Astro.url.pathname,
   title = 'BoB · Own your AI. BoB does the rest.',
   description = 'BoB turns a plain-English idea into finished, checked work. Local-first, no subscription, no lock-in. A Canopy Seed project.',
   ogDescription = description,
@@ -11,7 +13,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,8 +33,8 @@ const {
     />
   </head>
   <body>
-    <Nav />
+    <Nav locale={lang} path={path} />
     <slot />
-    <Footer />
+    <Footer locale={lang} path={path} />
   </body>
 </html>
