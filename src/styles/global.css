@@ -175,7 +175,8 @@ section { padding: 0 24px; }
 .entry-head .entry-desc { font-size: 1.15rem; color: var(--muted); margin: 0; }
 .entry-media { margin: 0 0 2rem; }
 .entry-media .ratio { position: relative; padding-top: 56.25%; border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); }
-.entry-media .ratio iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.entry-media .ratio iframe,
+.entry-media .ratio video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
 .entry-media audio { width: 100%; }
 /* prose (rendered MDX body) */
 .prose { color: #d7e4dc; font-size: 1.06rem; }

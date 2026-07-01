@@ -13,6 +13,7 @@ const knowledge = defineCollection({
     order: z.number().default(100),
     // optional media (rendered above the body by the entry template)
     videoEmbed: z.string().optional(), // YouTube/Vimeo embed URL
+    videoSrc: z.string().optional(), // path to a self-hosted video file (<video> tag)
     audioSrc: z.string().optional(), // path to an audio file
     appSrc: z.string().optional(), // iframe URL for a standalone mini-app
   }),

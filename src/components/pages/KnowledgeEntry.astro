@@ -37,7 +37,16 @@ const slug = slugOf(entry);
         </div>
       )
     }
-    {d.audioSrc && (<div class="entry-media"><audio controls src={d.audioSrc} /></div>)}
+    {
+      d.videoSrc && (
+        <div class="entry-media">
+          <div class="ratio">
+            <video src={d.videoSrc} title={d.title} controls preload="metadata" />
+          </div>
+        </div>
+      )
+    }
+    {d.audioSrc && (<div class="entry-media"><audio controls preload="none" src={d.audioSrc} /></div>)}
     {
       d.appSrc && (
         <div class="entry-media">
