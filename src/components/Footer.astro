@@ -1,0 +1,24 @@
+---
+import { GITHUB, RELEASES } from '../consts';
+const { locale = 'en', path = '/' } = Astro.props;
+---
+<footer class="footer">
+  <div class="footer-brand">
+    <span class="brand-badge"><img src="/icon/bob-crest-inv-gray.png" alt="" width="44" height="44" /></span>
+    <div>
+      <p class="brand-name">BoB</p>
+      <p class="footer-by">a Canopy Seed project</p>
+    </div>
+  </div>
+  <nav class="footer-links">
+    <a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
+    <a href={RELEASES} target="_blank" rel="noopener">Download</a>
+    <a href="/#how">How it works</a>
+    <a href="/#story">The story</a>
+    <a href="/knowledge">Knowledge</a>
+  </nav>
+  <p class="footer-fine">
+    Built solo, with a lot of help from some very cheap models.<br />
+    © 2026 Canopy Seed
+  </p>
+</footer>

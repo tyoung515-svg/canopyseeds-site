@@ -1,0 +1,18 @@
+---
+import { GITHUB, RELEASES } from '../consts';
+const { locale = 'en', path = '/' } = Astro.props;
+---
+<header class="nav">
+  <a class="brand" href="/">
+    <span class="brand-badge"><img src="/icon/bob-crest-inv-gray.png" alt="" width="42" height="42" /></span>
+    <span class="brand-name">BoB</span>
+    <span class="brand-by">by Canopy Seed</span>
+  </a>
+  <nav class="nav-links">
+    <a href="/#how">How it works</a>
+    <a href="/#why">Why</a>
+    <a href="/knowledge">Knowledge</a>
+    <a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
+    <a class="btn btn-sm" href={RELEASES} target="_blank" rel="noopener">Get BoB</a>
+  </nav>
+</header>

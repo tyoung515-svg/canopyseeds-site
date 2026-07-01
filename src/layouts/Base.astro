@@ -1,10 +1,12 @@
 ---
 import '../styles/global.css';
-import { GITHUB, RELEASES } from '../consts';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 
 const {
   title = 'BoB · Own your AI. BoB does the rest.',
   description = 'BoB turns a plain-English idea into finished, checked work. Local-first, no subscription, no lock-in. A Canopy Seed project.',
+  ogDescription = description,
 } = Astro.props;
 ---
 
@@ -18,7 +20,7 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={ogDescription} />
     <meta property="og:image" content="/brand/bob-crest.png" />
     <meta name="theme-color" content="#0a120e" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,41 +31,8 @@ const {
     />
   </head>
   <body>
-    <header class="nav">
-      <a class="brand" href="/">
-        <span class="brand-badge"><img src="/icon/bob-crest-inv-gray.png" alt="" width="42" height="42" /></span>
-        <span class="brand-name">BoB</span>
-        <span class="brand-by">by Canopy Seed</span>
-      </a>
-      <nav class="nav-links">
-        <a href="/#how">How it works</a>
-        <a href="/#why">Why</a>
-        <a href="/knowledge">Knowledge</a>
-        <a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-sm" href={RELEASES} target="_blank" rel="noopener">Get BoB</a>
-      </nav>
-    </header>
-
+    <Nav />
     <slot />
-
-    <footer class="footer">
-      <div class="footer-brand">
-        <span class="brand-badge"><img src="/icon/bob-crest-inv-gray.png" alt="" width="44" height="44" /></span>
-        <div>
-          <p class="brand-name">BoB</p>
-          <p class="footer-by">a Canopy Seed project</p>
-        </div>
-      </div>
-      <nav class="footer-links">
-        <a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
-        <a href={RELEASES} target="_blank" rel="noopener">Download</a>
-        <a href="/#how">How it works</a>
-        <a href="/knowledge">Knowledge</a>
-      </nav>
-      <p class="footer-fine">
-        Built solo, with a lot of help from some very cheap models.<br />
-        © 2026 Canopy Seed
-      </p>
-    </footer>
+    <Footer />
   </body>
 </html>
