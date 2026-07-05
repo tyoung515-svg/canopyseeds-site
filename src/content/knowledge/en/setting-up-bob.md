@@ -1,18 +1,18 @@
 ---
-title: "Setting up BoB (v0.96)"
+title: "Setting up BoB (v0.97)"
 description: "A first install, start to finish: the three prerequisites, the step-by-step setup, giving BoB a model backend, and your first login. Windows, headless-first, about twenty minutes."
 category: "Tutorials"
 format: "Write-up"
-date: 2026-07-01
+date: 2026-07-05
 order: 1
 draft: false
 ---
 
-This is the shortest honest path from nothing to a running BoB on your own machine. **v0.96 is Windows-only and headless-first**: the command-line, MCP, and agent front door works today; the web and desktop GUIs ship as a *preview*. Everything runs on `127.0.0.1` by default, with your keys, on your box. Nobody in the middle.
+This is the shortest honest path from nothing to a running BoB on your own machine. **v0.97 is Windows-only and headless-first**: the command-line, MCP, and agent front door is what you use today; the GUI is the **Kotlin Multiplatform desktop app** (Android preview). There is no browser UI — the old zero-install web page was removed in this release. Everything runs on `127.0.0.1` by default, with your keys, on your box. Nobody in the middle.
 
 Budget about twenty minutes, most of it waiting on downloads.
 
-> **On the installer:** v0.96 is set up with the steps below — that's the supported path today. A single-command installer that does all of this for you is landing in **v1.0**. If you're comfortable in a terminal, the manual walk-through here takes about the same time and shows you exactly what's happening.
+> **On the installer:** v0.97 is set up with the steps below — that's the supported path today. A single-command installer that does all of this for you is landing in **v1.0**. If you're comfortable in a terminal, the manual walk-through here takes about the same time and shows you exactly what's happening.
 
 ## Before you start: three prerequisites
 
@@ -116,15 +116,26 @@ Then give BoB at least one **model backend** — it's the harness; the intellige
 Invoke-RestMethod http://127.0.0.1:7826/health
 ```
 
-Three services are now running: **core** (the engine, port 7825), **gateway** (auth + API + the web UI, 7826), and the **Claude pipeline** (7823).
+Three services are now running: **core** (the engine, port 7825), **gateway** (auth + the REST + WebSocket API, JSON only, 7826), and the **Claude pipeline** (7823).
 
 > *Optional:* `./scripts/win/install-durability.ps1 -IncludeModels:$false` registers Task-Scheduler tasks so core/gateway auto-start on logon after a reboot. Skip it if you don't want auto-start.
 
 ## 6. First login
 
-Open the preview web UI:
+BoB has two front doors. Pick whichever fits how you work — the login is the same for both.
 
-**http://127.0.0.1:7826/ui**
+**The desktop app (the GUI).** v0.97 removed the browser UI; the client is now the Kotlin Multiplatform **desktop app** in `bobclaw-app`. It's a real app you build once, not a zero-install web page — you need a **JDK 17** (Temurin is fine). From the repo root:
+
+```powershell
+cd bobclaw-app
+./gradlew :desktopApp:run
+```
+
+The first build pulls Gradle and the Compose runtime, so give it a few minutes. The app ships in **English, Simplified Chinese (简), and Traditional Chinese (繁)** with a restart-free language toggle in the header — new in v0.97.
+
+**Headless (terminal or another agent).** Prefer to stay in your terminal, or drive BoB from your own agent? The **MCP server** (`./scripts/win/start-mcp.ps1`) is the intended headless front door; it, the CLI, and the JSON + WebSocket API at `http://127.0.0.1:7826` all speak to the same gateway.
+
+Either way, you log in the same way:
 
 - Log in as **`admin`** with the password `gen_secrets` printed in step 4.
 - Login also needs a **TOTP 2FA code**. Enroll the `TOTP_SECRET` from `.secrets\bobclaw.env` in any authenticator app (Google Authenticator, 1Password, Aegis…) using this URI, then enter the rotating 6-digit code:
@@ -132,7 +143,7 @@ Open the preview web UI:
   otpauth://totp/BoB:admin?secret=<TOTP_SECRET>&issuer=BoB
   ```
 
-If you set an Anthropic key, your first chat message confirms the model resolves; local-only setups validate on first chat too. Prefer to stay in your terminal or drive BoB from another agent? The headless **MCP server** (`./scripts/win/start-mcp.ps1`) is the intended front door for v0.96 — the web UI is the preview.
+If you set an Anthropic key, your first chat message confirms the model resolves; local-only setups validate on first chat too. To have BoB reply in Chinese, switch the app's language toggle — the assistant follows the app's locale.
 
 ## Stopping and starting again
 
@@ -149,8 +160,8 @@ Adding or changing a backend key is the one thing that needs a restart — `stop
 ## Good-to-knows for a first run
 
 - **Memory is off by default.** BoB's long-term memory (LKS) uses optional local model servers; with them unset, recall simply fails open and never blocks the stack. You can turn it on later.
-- **Loopback by default.** Every service binds `127.0.0.1`. Do **not** expose the gateway to a network until you've read `SECURITY.md` — for remote access, an SSH tunnel or the native client beats the preview web UI, which keeps tokens in the browser.
-- **Single-operator, this release.** v0.96 is honest about its scope: headless-usable, GUI-preview, not a hardened multi-tenant service. The one-command installer, containerized packaging, and cross-platform support are tracked toward v1.0.
+- **Loopback by default.** Every service binds `127.0.0.1`. Do **not** expose the gateway to a network until you've read `SECURITY.md` — for remote access, run the desktop app over an SSH tunnel. (v0.97 removed the browser UI, and with it the browser `localStorage` session-token surface.)
+- **Single-operator, this release.** v0.97 is honest about its scope: headless-usable, with a desktop GUI (Android preview), not a hardened multi-tenant service. The one-command installer, containerized packaging, and cross-platform support are tracked toward v1.0.
 
 ## Where to go next
 
