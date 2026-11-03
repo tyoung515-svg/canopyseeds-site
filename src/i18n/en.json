@@ -5,7 +5,8 @@
     "why": "Why",
     "knowledge": "Knowledge",
     "github": "GitHub",
-    "getBob": "Get BoB"
+    "getBob": "Get BoB",
+    "language": "Language"
   },
   "footer": {
     "by": "a Canopy Seed project",
@@ -38,7 +39,8 @@
       "ctaPrimary": "Get BoB, free",
       "ctaSecondary": "How it works",
       "trust": "Runs on your machine, with your keys · open source · pennies a build",
-      "artAlt": "BoB, a Highlander hoisting a mechanical keyboard overhead"
+      "artAlt": "BoB, a Highlander hoisting a mechanical keyboard overhead",
+      "tour": "Take a tour"
     },
     "backronym": {
       "eyebrow": "What the name means",
@@ -125,6 +127,12 @@
       "body": "Open source. Local-first. Your keys, your machine. No subscription.",
       "primary": "Download BoB, free",
       "secondary": "View on GitHub"
+    },
+    "research": {
+      "eyebrow": "AI research, alongside BoB",
+      "heading": "The thinking behind the work.",
+      "intro": "How memory is organized, how context is preserved, and why the system around a model matters.",
+      "all": "Explore the full knowledge library →"
     }
   },
   "knowledge": {
@@ -146,6 +154,40 @@
       "Audio": "Audio",
       "Video": "Video",
       "App": "App"
+    },
+    "englishOnly": "Available in English",
+    "englishNotice": "Available in English · this article has not been translated yet.",
+    "edition": {
+      "Reference design": "Reference design",
+      "Architecture note": "Architecture note",
+      "Research manuscript": "Research manuscript"
+    },
+    "previewEdition": "Preview edition",
+    "media": {
+      "heading": "Watch & listen",
+      "intro": "A short video and two podcast discussions to accompany the paper.",
+      "shortVideo": "Short video",
+      "podcast": "Podcast",
+      "download": "Download file",
+      "readPaper": "Read the paper"
+    }
+  },
+  "preview": {
+    "title": "Local preview · not published",
+    "detail": "Tour + research additions for review. Existing release links are unchanged."
+  },
+  "researchItems": {
+    "memory-architecture": {
+      "title": "Bob’s memory system",
+      "description": "A reference design for multi-user memory: recorded turns, curated decisions, scoped access and the shared-state exceptions."
+    },
+    "cited-claims-compaction": {
+      "title": "Cited Claims Compaction",
+      "description": "How typed, cited claims preserve context across long conversations—and where lexical validation still falls short."
+    },
+    "the-harness-is-the-machine": {
+      "title": "The Harness Is the Machine",
+      "description": "Persistence, identity, and the limits of model-level AI governance. A research manuscript by Travis Young, with BoB."
     }
   }
 }

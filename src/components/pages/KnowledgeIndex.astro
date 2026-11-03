@@ -48,8 +48,14 @@ const categories = ['Papers', 'Tutorials', 'Work Shapes', 'Architecture'];
               <span class="kn-badge cat">{t(`knowledge.category.${e.data.category}`)}</span>
               <span class="kn-badge fmt">{t(`knowledge.format.${e.data.format}`)}</span>
             </div>
-            <h3>{e.data.title}</h3>
-            <p>{e.data.description}</p>
+            <h3>{locale === 'th' && e.data.edition ? t(`researchItems.${slugOf(e)}.title`) : e.data.title}</h3>
+            {(e.data.date || e.data.edition) && <div class="article-meta">
+              {e.data.date && <time datetime={e.data.date.toISOString().slice(0, 10)}>{e.data.date.toLocaleDateString(locale === 'th' ? 'th-TH-u-ca-gregory' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</time>}
+              {e.data.edition && <span>{t(`knowledge.edition.${e.data.edition}`)}</span>}
+              {e.data.version && <span>{e.data.version}</span>}
+            </div>}
+            <p>{locale === 'th' && e.data.edition ? t(`researchItems.${slugOf(e)}.description`) : e.data.description}</p>
+            {localeOf(e) !== locale && <span class="language-note">{t('knowledge.englishOnly')}</span>}
             <span class="kn-more">{t('knowledge.read')}</span>
           </a>
         ))

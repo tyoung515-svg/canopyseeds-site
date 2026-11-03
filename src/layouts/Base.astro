@@ -1,9 +1,12 @@
 ---
 import '../styles/global.css';
+import '../styles/content-preview.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { getAbsoluteLocaleUrl } from 'astro:i18n';
-import { locales, defaultLang } from '../i18n/utils';
+import { locales, defaultLang, useTranslations } from '../i18n/utils';
+
+const localPreview = process.env.LOCAL_PREVIEW === '1';
 
 const {
   lang = 'en',
@@ -12,12 +15,14 @@ const {
   description = 'BoB turns a plain-English idea into finished, checked work. Local-first, no subscription, no lock-in. A Canopy Seed project.',
   ogDescription = description,
 } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
+    {localPreview && <meta name="robots" content="noindex,nofollow" />}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/icon/bob-crest-64.png" />
     <link rel="apple-touch-icon" href="/icon/bob-crest-256.png" />
@@ -41,11 +46,13 @@ const {
     {lang === 'zh-hans' && (
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
     )}
+    {lang === 'th' && <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />}
     {lang === 'ja' && (
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
     )}
   </head>
   <body>
+    {localPreview && <div class="preview-banner" role="note">{t('preview.title')} <span>{t('preview.detail')}</span></div>}
     <Nav locale={lang} path={path} />
     <slot />
     <Footer locale={lang} path={path} />

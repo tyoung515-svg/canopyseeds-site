@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import '../../styles/app-tour.css';
+import tourHtml from '../../data/tour-markup.html?raw';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+const { locale = 'en' } = Astro.props;
+const localizedTourHtml = tourHtml.replace('href="/knowledge/"', `href="${getRelativeLocaleUrl(locale, '/knowledge/')}"`);
+---
+<Base lang={locale} path="/tour/" title="App tour · BoB" description="Explore BoB’s agents, workspace, projects and memory before you download. An illustrative tour with sample data.">
+  <main class="tour-shell" lang="en">
+    {locale !== 'en' && <p class="language-note" lang={locale} style="max-width:1072px;margin:16px auto 0">{locale === 'th' ? 'หน้าชมแอปนี้เป็นภาษาอังกฤษ' : 'App tour in English'}</p>}
+    <Fragment set:html={localizedTourHtml} />
+  </main>
+</Base>
+<script>
+  import '../../scripts/app-tour.js';
+</script>

@@ -1,15 +1,16 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { locales, langLabels } from '../i18n/utils';
+import { locales, langLabels, useTranslations } from '../i18n/utils';
 
 const { locale = 'en', path = '/' } = Astro.props;
+const t = useTranslations(locale);
 const options = locales.map((l) => ({
   code: l,
   label: langLabels[l],
   url: getRelativeLocaleUrl(l, path),
 }));
 ---
-<select class="lang-switcher" aria-label="Language" onchange="location.href=this.value">
+<select class="lang-switcher" aria-label={t('nav.language')} onchange="location.href=this.value">
   {
     options.map((o) => (
       <option value={o.url} selected={o.code === locale}>

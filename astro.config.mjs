@@ -8,7 +8,7 @@ export default defineConfig({
   site: 'https://canopyseeds.com',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es', 'zh-hans', 'ja', 'pt'],
+    locales: ['en', 'es', 'zh-hans', 'ja', 'pt', 'th'],
     routing: { prefixDefaultLocale: false },
   },
   integrations: [
@@ -16,7 +16,7 @@ export default defineConfig({
     sitemap({
       i18n: {
         defaultLocale: 'en',
-        locales: { en: 'en', es: 'es', 'zh-hans': 'zh-hans', ja: 'ja', pt: 'pt' },
+        locales: { en: 'en', es: 'es', 'zh-hans': 'zh-hans', ja: 'ja', pt: 'pt', th: 'th' },
       },
     }),
   ],

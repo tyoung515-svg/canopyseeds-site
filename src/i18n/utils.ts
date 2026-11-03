@@ -3,6 +3,7 @@ import es from './es.json';
 import zhHans from './zh-hans.json';
 import ja from './ja.json';
 import pt from './pt.json';
+import th from './th.json';
 
 export const defaultLang = 'en' as const;
 
@@ -15,6 +16,7 @@ export const languages = {
   'zh-hans': zhHans,
   ja,
   pt,
+  th,
 } as const;
 
 export type Lang = keyof typeof languages;
@@ -28,6 +30,7 @@ export const langLabels: Record<Lang, string> = {
   'zh-hans': '简体中文',
   ja: '日本語',
   pt: 'Português',
+  th: 'ไทย',
 };
 
 /** Read the active locale from a URL path (e.g. /es/knowledge -> 'es'). */

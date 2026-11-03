@@ -1,7 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { GITHUB, RELEASES } from '../../consts';
-import { useTranslations } from '../../i18n/utils';
+import { useTranslations, slugOf } from '../../i18n/utils';
+import { getCollection } from 'astro:content';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+const featured = (await getCollection('knowledge', (e) => e.id.startsWith('en/') && Boolean(e.data.edition))).sort((a,b) => a.data.order - b.data.order);
 
 const { locale = 'en' } = Astro.props;
 const t = useTranslations(locale);
@@ -23,6 +26,7 @@ const t = useTranslations(locale);
           <p class="lede" set:html={t('home.hero.lede')}></p>
           <div class="cta-row">
             <a class="btn btn-lg" href={RELEASES} target="_blank" rel="noopener">{t('home.hero.ctaPrimary')}</a>
+            <a class="btn btn-ghost btn-lg" href={getRelativeLocaleUrl(locale, '/tour/')}>{locale === 'th' ? t('home.hero.tour') : locale === 'en' ? 'Take a tour' : 'App tour (English)'}</a>
             <a class="btn btn-ghost btn-lg" href="#how">{t('home.hero.ctaSecondary')}</a>
           </div>
           <p class="trust">{t('home.hero.trust')}</p>
@@ -221,6 +225,24 @@ const t = useTranslations(locale);
           <p class="builder-kicker" set:html={t('home.proof.kicker')}></p>
         </div>
       </section>
+
+      {(locale === 'en' || locale === 'th') && <section class="section" id="research">
+        <div class="section-head">
+          <p class="eyebrow">{t('home.research.eyebrow')}</p>
+          <h2>{t('home.research.heading')}</h2>
+          <p>{t('home.research.intro')}</p>
+        </div>
+        <div class="cards research-cards">
+          {featured.map((e) => <a class="card research-card" href={getRelativeLocaleUrl(locale, `/knowledge/${slugOf(e)}/`)}>
+            <span class="kn-badge cat">{t(`knowledge.edition.${e.data.edition}`)}</span>
+            <h3>{t(`researchItems.${slugOf(e)}.title`)}</h3>
+            <p>{t(`researchItems.${slugOf(e)}.description`)}</p>
+            {locale === 'th' && <span class="language-note">{t('knowledge.englishOnly')}</span>}
+            <span class="research-more">{e.data.version && <span>{e.data.version} · </span>}{t('knowledge.read')}</span>
+          </a>)}
+        </div>
+        <a class="library-link" href={getRelativeLocaleUrl(locale, '/knowledge/')}>{t('home.research.all')}</a>
+      </section>}
 
       <!-- philosophy -->
       <section class="band band-green">

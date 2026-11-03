@@ -1,0 +1,51 @@
+/* Small additions to the existing visual system, not a redesign. */
+.companion-media { padding: 0 0 32px; margin: 0 0 36px; border-bottom: 1px solid var(--line); }
+.companion-heading { display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between; }
+.companion-heading h2 { font-size:1.65rem;margin:0; }
+.companion-heading a,.media-download { color:var(--green-2);font-size:.85rem; }
+.companion-intro { color:var(--muted);margin:10px 0 20px; }
+.companion-grid { display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;align-items:start; }
+.companion-video { margin:0;min-width:0; }
+.companion-video video { display:block;width:100%;aspect-ratio:9/16;object-fit:contain;border-radius:12px;background:#000;border:1px solid var(--line); }
+.companion-video figcaption { display:grid;gap:5px;padding-top:12px;font-size:.9rem; }
+.media-kind { color:var(--green-2);font-size:.78rem;font-weight:600; }
+.companion-audios { display:grid;gap:16px;min-width:0; }
+.companion-audio { background:var(--surface);padding:20px;border:1px solid var(--line);border-radius:12px;min-width:0; }
+.companion-audio h3 { margin:8px 0 16px;font-size:1.1rem;line-height:1.4; }
+.companion-audio audio { display:block;width:100%;height:44px;min-width:0; }
+.media-download { display:inline-block;padding-top:12px; }
+@media(max-width:600px) { .companion-grid {grid-template-columns:minmax(0,1fr);} .companion-video {width:min(100%,300px);justify-self:center;} }
+
+html[lang="th"] body { font-family: "Noto Sans Thai", "Inter", system-ui, sans-serif; line-height: 1.85; }
+html[lang="th"] h1, html[lang="th"] h2, html[lang="th"] h3,
+html[lang="th"] .btn, html[lang="th"] .kn-filter, html[lang="th"] .lang-switcher {
+  font-family: "Noto Sans Thai", "Space Grotesk", system-ui, sans-serif;
+  line-height: 1.4; letter-spacing: 0;
+}
+html[lang="th"] .hero h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.45; }
+html[lang="th"] .eyebrow, html[lang="th"] .kn-badge { letter-spacing: 0; }
+html[lang="th"] .entry-head, html[lang="th"] .kn-card { overflow-wrap: anywhere; }
+
+.preview-banner { padding: 10px 24px; text-align: center; background: #233024; border-bottom: 1px solid #48604a; color: #e4efd8; font-size: .82rem; font-weight: 600; }
+.preview-banner span { margin-left: 12px; font-weight: 400; color: #bdcbb8; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 5px 14px; color: var(--muted); font-size: .78rem; margin: 10px 0 16px; line-height: 1.5; }
+.article-meta span { border-left: 1px solid var(--line); padding-left: 12px; }
+.language-note { color: var(--muted); font-size: .82rem; display: block; }
+.research-card { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; transition: border-color .15s, transform .15s; }
+.research-card:hover { border-color: var(--green); transform: translateY(-3px); }
+.research-card h3 { font-size: 1.35rem; }
+.research-card p { flex: 1; }
+.research-more, .library-link { color: var(--green-2); font-weight: 600; }
+.library-link { display: inline-block; margin-top: 24px; }
+.prose img { display: block; max-width: 100%; height: auto; border-radius: 10px; }
+.prose { overflow-wrap: anywhere; }
+.prose pre { max-width: 100%; overflow-x: auto; }
+.prose table { display: block; overflow-x: auto; max-width: 100%; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--green-2); outline-offset: 4px; }
+@media (max-width: 700px) { .preview-banner span { display: block; margin: 3px 0 0; } .research-cards { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .nav { flex-wrap: wrap; }
+  .brand-by { white-space: nowrap; }
+  .nav-links { width: 100%; justify-content: space-between; flex-wrap: wrap; }
+  .footer-links { flex-wrap: wrap; justify-content: center; gap: 12px 20px; }
+}

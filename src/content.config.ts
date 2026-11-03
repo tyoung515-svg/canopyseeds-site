@@ -11,6 +11,16 @@ const knowledge = defineCollection({
     date: z.coerce.date().optional(),
     draft: z.boolean().default(false),
     order: z.number().default(100),
+    edition: z.string().optional(),
+    version: z.string().optional(),
+    status: z.string().optional(),
+    companionMedia: z.array(z.object({
+      kind: z.enum(['audio', 'video']),
+      title: z.string(),
+      src: z.string(),
+      duration: z.string(),
+      poster: z.string().optional(),
+    })).default([]),
     // optional media (rendered above the body by the entry template)
     videoEmbed: z.string().optional(), // YouTube/Vimeo embed URL
     videoSrc: z.string().optional(), // path to a self-hosted video file (<video> tag)

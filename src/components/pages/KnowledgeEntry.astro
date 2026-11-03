@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { render } from 'astro:content';
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { useTranslations, slugOf } from '../../i18n/utils';
+import { useTranslations, slugOf, localeOf } from '../../i18n/utils';
 
 const { entry, locale = 'en' } = Astro.props;
 const t = useTranslations(locale);
@@ -21,6 +21,12 @@ const slug = slugOf(entry);
       </div>
       <h1>{d.title}</h1>
       <p class="entry-desc">{d.description}</p>
+      <div class="article-meta">
+        {d.date && <time datetime={d.date.toISOString().slice(0, 10)}>{d.date.toLocaleDateString(locale === 'th' ? 'th-TH-u-ca-gregory' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</time>}
+        {d.edition && <span>{t(`knowledge.edition.${d.edition}`)}</span>}
+        {d.version && <span>{d.version}</span>}
+        {d.status && <span>{d.status === 'Preview edition' ? t('knowledge.previewEdition') : d.status}</span>}
+      </div>
     </header>
 
     {
@@ -57,7 +63,35 @@ const slug = slugOf(entry);
       )
     }
 
-    <div class="prose">
+    {d.companionMedia.length > 0 && <section class="companion-media" aria-labelledby="companion-heading">
+      <div class="companion-heading">
+        <h2 id="companion-heading">{t('knowledge.media.heading')}</h2>
+        <a href="#paper-text">{t('knowledge.media.readPaper')} ↓</a>
+      </div>
+      <p class="companion-intro">{t('knowledge.media.intro')}</p>
+      <div class="companion-grid">
+        {d.companionMedia.filter((m) => m.kind === 'video').map((m) => <figure class="companion-video">
+          <video controls playsinline preload="none" poster={m.poster} aria-label={m.title}>
+            <source src={m.src} type="video/mp4" />
+            <a href={m.src}>{t('knowledge.media.download')}</a>
+          </video>
+          <figcaption><span class="media-kind">{t('knowledge.media.shortVideo')} · {m.duration}</span><strong>{m.title}</strong></figcaption>
+        </figure>)}
+        <div class="companion-audios">
+          {d.companionMedia.filter((m) => m.kind === 'audio').map((m) => <div class="companion-audio">
+            <span class="media-kind">{t('knowledge.media.podcast')} · {m.duration}</span>
+            <h3>{m.title}</h3>
+            <audio controls preload="none" aria-label={m.title}>
+              <source src={m.src} type="audio/mp4" />
+              <a href={m.src}>{t('knowledge.media.download')}</a>
+            </audio>
+            <a class="media-download" href={m.src} download>{t('knowledge.media.download')} ↗</a>
+          </div>)}
+        </div>
+      </div>
+    </section>}
+    {localeOf(entry) !== locale && <p class="language-note">{t('knowledge.englishNotice')}</p>}
+    <div id="paper-text" class="prose" lang={localeOf(entry)}>
       <Content />
     </div>
   </article>

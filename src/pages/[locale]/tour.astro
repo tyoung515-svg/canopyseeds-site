@@ -1,0 +1,9 @@
+---
+import TourPage from '../../components/pages/TourPage.astro';
+import { nonDefaultLocales } from '../../i18n/utils';
+export function getStaticPaths() {
+  return nonDefaultLocales.map((locale) => ({ params: { locale }, props: { locale } }));
+}
+const { locale } = Astro.props;
+---
+<TourPage locale={locale} />
